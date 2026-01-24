@@ -9,73 +9,47 @@
 </head>
 
 <body>
-  <!-- Top progress bar -->
-  <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
-
-  <!-- Background -->
-  <div class="bg" aria-hidden="true">
-    <div class="orb o1"></div>
-    <div class="orb o2"></div>
-    <div class="orb o3"></div>
-    <div class="noise"></div>
-  </div>
-
-  <!-- NAV -->
-  <header class="header" id="header">
+  <header class="header">
     <div class="nav">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="logoDot"></span>
-        <span>Rachana</span>
-      </a>
+      <a class="brand" href="#top">Rachana</a>
 
-      <nav class="links" id="navLinks" aria-label="Primary">
-        <a href="#about" data-section="about">About</a>
-        <a href="#skills" data-section="skills">Skills</a>
-        <a href="#projects" data-section="projects">Projects</a>
-        <a href="#experience" data-section="experience">Experience</a>
-        <a href="#contact" data-section="contact" class="pill">Contact</a>
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
+
+      <nav class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="pill">Contact</a>
       </nav>
-
-      <div class="navRight">
-        <button class="iconBtn" id="themeBtn" aria-label="Toggle theme" title="Theme">
-          <span id="themeIcon">◐</span>
-        </button>
-        <button class="iconBtn menuBtn" id="menuBtn" aria-label="Open menu" title="Menu">☰</button>
-      </div>
     </div>
 
-    <!-- Mobile menu panel -->
-    <div class="mobilePanel" id="mobilePanel" aria-label="Mobile menu">
+    <div class="mobile" id="mobile">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#contact" class="pill">Contact</a>
     </div>
   </header>
 
   <main id="top" class="container">
-
-    <!-- HERO -->
     <section class="hero">
       <div class="heroLeft">
-        <p class="kicker">Business Analyst • Data Analyst • Data Engineer</p>
-
-        <h1 class="title">
-          Helping teams understand the <span class="accent">why</span> behind the numbers.
-        </h1>
-
-        <p class="subtitle">
-          KPI design • SQL analysis • Power BI dashboards • AWS-based pipelines • Automation with Python
+        <p class="eyebrow">Business Analyst • Data Analyst • Data Engineer</p>
+        <h1 class="h1">Helping businesses understand the “why” behind the numbers.</h1>
+        <p class="sub">
+          I build KPI dashboards, decision-ready reporting, and clean analysis using SQL, Power BI,
+          Python, and AWS.
         </p>
 
-        <div class="cta">
-          <a class="btn primary" href="#projects">View Projects</a>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View projects</a>
           <a class="btn" href="#contact">Contact</a>
           <a class="btn ghost" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
         </div>
 
-        <div class="social">
+        <div class="metaRow">
           <!-- Replace these -->
           <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -83,106 +57,92 @@
         </div>
       </div>
 
-      <div class="heroRight">
-        <div class="card statCard">
+      <aside class="profileCard reveal">
+        <div class="avatar" aria-hidden="true">R</div>
+        <div class="profileTop">
+          <div>
+            <div class="name">Rachana</div>
+            <div class="role">Analytics • BI • Data</div>
+          </div>
+          <span class="chip">Open to work</span>
+        </div>
+
+        <div class="stats">
           <div class="stat">
-            <div class="num">10M+</div>
-            <div class="lbl">records handled</div>
+            <div class="k">10M+</div>
+            <div class="v">records handled</div>
           </div>
           <div class="stat">
-            <div class="num">8–12</div>
-            <div class="lbl">dashboards shipped</div>
+            <div class="k">8–12</div>
+            <div class="v">dashboards shipped</div>
           </div>
           <div class="stat">
-            <div class="num">30–45%</div>
-            <div class="lbl">effort reduced</div>
+            <div class="k">30–45%</div>
+            <div class="v">effort reduced</div>
           </div>
           <div class="stat">
-            <div class="num">AWS</div>
-            <div class="lbl">S3 • Glue • Lambda</div>
+            <div class="k">AWS</div>
+            <div class="v">S3 • Glue • Lambda</div>
           </div>
         </div>
 
-        <div class="card miniCard">
-          <div class="row">
-            <span class="badge">Open to roles</span>
-            <span class="muted">Business Analyst / Data Analyst</span>
-          </div>
-          <p class="muted small">
-            Clean layout, smooth motion, and a premium navbar.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <div class="sectionHead">
-        <h2>About</h2>
-        <p class="muted">
-          Master’s in Data Science (UMBC, May 2024). I translate business questions into clean metrics,
-          dashboards, and analysis that leaders can act on.
+        <p class="small">
+          Tip: replace stats with your exact numbers for instant credibility.
         </p>
-      </div>
-
-      <div class="aboutGrid">
-        <div class="card">
-          <h3>What I do</h3>
-          <p class="muted">
-            KPI definition, variance analysis, stakeholder reporting, dashboard design, and ad-hoc SQL.
-            I also automate repeatable workflows using Python.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>What I use</h3>
-          <p class="muted">
-            SQL, Python, Power BI, Tableau, AWS (S3/Glue/Lambda/Athena), plus basic streaming (Kafka).
-          </p>
-        </div>
-      </div>
+      </aside>
     </section>
 
-    <!-- SKILLS -->
+    <section id="about" class="section reveal">
+      <h2>About</h2>
+      <p>
+        Master’s in Data Science (UMBC, May 2024). I translate business questions into metrics and dashboards,
+        support leadership decisions with SQL analysis, and automate reporting with Python.
+      </p>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="sectionTop">
+        <h2>Projects</h2>
+        <div class="smallMuted">Selected work (add your real repo links)</div>
+      </div>
+
+      <div class="grid" id="projectsGrid"></div>
+    </section>
+
     <section id="skills" class="section reveal">
       <div class="sectionTop">
         <h2>Skills</h2>
-        <input id="skillSearch" class="input" placeholder="Search skills (SQL, AWS, Power BI)..." />
+        <input class="input" id="skillSearch" placeholder="Search (SQL, AWS, Power BI)..." />
       </div>
       <div class="chips" id="skillsWrap"></div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <div class="sectionTop">
-        <h2>Projects</h2>
-        <div class="filters" id="filters"></div>
-      </div>
-      <div class="grid" id="projectsGrid"></div>
-    </section>
-
-    <!-- EXPERIENCE -->
     <section id="experience" class="section reveal">
       <h2>Experience</h2>
+
       <div class="timeline">
-        <article class="card item">
-          <div class="itemTop">
-            <h3>Business Analyst — NB Alpha Omega</h3>
-            <span class="muted">Sep 2024 – Present</span>
+        <article class="card">
+          <div class="cardTop">
+            <div class="titleRow">
+              <h3>Business Analyst — NB Alpha Omega</h3>
+              <span class="smallMuted">Sep 2024 – Present</span>
+            </div>
           </div>
-          <ul class="muted">
-            <li>Built KPI dashboards and reporting datasets used in weekly and monthly business reviews.</li>
-            <li>Wrote optimized SQL for ad-hoc analysis on large tables to support faster decisions.</li>
-            <li>Automated recurring checks and reporting using Python to reduce manual effort.</li>
+          <ul>
+            <li>Built KPI dashboards and reporting datasets used in weekly/monthly reviews.</li>
+            <li>Wrote optimized SQL for ad-hoc analysis on large tables.</li>
+            <li>Automated recurring reporting checks using Python to reduce manual effort.</li>
           </ul>
         </article>
 
-        <article class="card item">
-          <div class="itemTop">
-            <h3>Project Engineer — Wipro</h3>
-            <span class="muted">May 2021 – Jun 2022</span>
+        <article class="card">
+          <div class="cardTop">
+            <div class="titleRow">
+              <h3>Project Engineer — Wipro</h3>
+              <span class="smallMuted">May 2021 – Jun 2022</span>
+            </div>
           </div>
-          <ul class="muted">
+          <ul>
             <li>Supported analytics and reporting workflows using SQL and BI tools.</li>
             <li>Partnered with stakeholders to define KPIs and deliver dashboard updates.</li>
           </ul>
@@ -190,19 +150,17 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section reveal">
-      <div class="sectionTop">
-        <h2>Contact</h2>
-        <div class="muted">Let’s connect. Email works best.</div>
-      </div>
+      <h2>Contact</h2>
 
-      <div class="contactCard card">
-        <div>
-          <div class="muted small">Email</div>
-          <div class="big">yourname@email.com</div>
+      <div class="contact">
+        <div class="contactLeft">
+          <div class="smallMuted">Email</div>
+          <div class="contactBig">yourname@email.com</div>
+          <div class="smallMuted">Best way to reach me: email or LinkedIn.</div>
         </div>
-        <div class="contactBtns">
+
+        <div class="contactRight">
           <a class="btn primary" href="mailto:yourname@email.com">Email me</a>
           <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
@@ -210,7 +168,7 @@
     </section>
 
     <footer class="footer">
-      <div class="muted small">© <span id="year"></span> Rachana • Built on GitHub Pages</div>
+      <div class="smallMuted">© <span id="year"></span> Rachana</div>
     </footer>
   </main>
 
