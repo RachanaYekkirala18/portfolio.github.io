@@ -1,166 +1,258 @@
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Mobile nav
-const navBtn = document.getElementById("navBtn");
-const navMobile = document.getElementById("navMobile");
-navBtn.addEventListener("click", () => navMobile.classList.toggle("open"));
-navMobile.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navMobile.classList.remove("open")));
-
-// Hero "coder object" (Neha-style vibe)
-const code = `
-const analyst = {
-  name: 'Rachana',
-  roles: ['Business Analyst', 'Data Analyst', 'Data Engineer'],
-  stack: ['SQL', 'Power BI', 'Python', 'AWS'],
-  hardWorker: true,
-  quickLearner: true,
-  problemSolver: true,
-  hireable() {
-    return (
-      this.hardWorker &&
-      this.problemSolver &&
-      this.stack.length >= 4
-    );
+/* ========= Edit only this block ========= */
+const PROFILE = {
+  name: "Venkata Rachana Yekkirala",
+  email: "your.email@gmail.com",
+  phone: "+1-XXX-XXX-XXXX",
+  links: {
+    linkedin: "https://www.linkedin.com/in/your-link/",
+    github: "https://github.com/your-username",
+    tableau: "https://public.tableau.com/app/profile/your-name",
+    powerbi: "https://app.powerbi.com/",
+    medium: "https://medium.com/@your-handle"
   }
 };
-`.trim();
 
-document.getElementById("codeText").textContent = code;
-
-// Experience (edit as you want)
-const experiences = [
-  {
-    company: "NB Alpha Omega",
-    role: "Business Analyst",
-    duration: "Sep 2024 – Present",
-    tools: ["SQL", "Power BI", "Python", "AWS"],
-    desc: [
-      "Built KPI dashboards and reporting datasets used in weekly and monthly reviews.",
-      "Wrote optimized SQL for ad-hoc analysis across large tables to support faster decisions.",
-      "Automated recurring checks and reporting using Python to reduce manual effort."
-    ],
-  },
-  {
-    company: "Wipro",
-    role: "Project Engineer",
-    duration: "May 2021 – Jun 2022",
-    tools: ["SQL", "Power BI", "Excel"],
-    desc: [
-      "Supported analytics and reporting workflows, improving visibility into operational metrics.",
-      "Partnered with stakeholders to define KPIs and deliver dashboard updates."
-    ],
-  },
-];
-
-const expWrap = document.getElementById("expWrap");
-expWrap.innerHTML = experiences.map(e => `
-  <article class="card">
-    <h3 class="cardTitle">${e.company}</h3>
-    <p class="muted"><b>${e.role}</b> • ${e.duration}</p>
-    <div class="tags">${e.tools.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-    <ul class="muted" style="margin:10px 0 0; padding-left:18px;">
-      ${e.desc.map(x => `<li style="margin:6px 0;">${x}</li>`).join("")}
-    </ul>
-  </article>
-`).join("");
-
-// Projects + filters (edit links + add more)
-const projects = [
+// Projects + experience prefilled (based on what you typically work on)
+// Replace repo links with your actual GitHub repo URLs.
+const PROJECTS = [
   {
     title: "AWS Data Lakehouse Pipeline",
-    desc: "Medallion lakehouse pipeline for analytics-ready datasets using AWS services.",
-    tags: ["AWS", "ETL", "Lakehouse"],
-    github: "https://github.com/",
-    demo: ""
+    type: "Data Engineering",
+    tags: ["AWS", "S3", "Glue", "Athena", "Lambda", "Medallion"],
+    blurb: "Built a lakehouse-style pipeline with curated layers and query-ready analytics datasets.",
+    stack: ["S3", "Glue", "Lambda", "Step Functions", "Athena", "Redshift", "QuickSight", "PySpark"],
+    highlights: [
+      "Medallion architecture: bronze → silver → gold datasets",
+      "Data validation + quality checks before publishing",
+      "Query-ready tables optimized for analytics workloads"
+    ],
+    link: "https://github.com/your-username/your-lakehouse-repo"
   },
   {
     title: "Kafka Clickstream Streaming Pipeline",
-    desc: "Real-time clickstream ingestion with Kafka, Python consumers, and PostgreSQL sink.",
-    tags: ["Kafka", "Python", "Streaming"],
-    github: "https://github.com/",
-    demo: ""
+    type: "Streaming",
+    tags: ["Kafka", "CDC", "Docker", "PostgreSQL", "Monitoring"],
+    blurb: "Real-time ingestion + processing pipeline for clickstream analytics with monitoring.",
+    stack: ["Kafka", "Kafka Connect", "Python", "PostgreSQL", "Docker", "Grafana"],
+    highlights: [
+      "Streaming ingestion with connectors + durable topics",
+      "Consumers transform/validate events for analytics",
+      "Dashboards for throughput, lag, and error rates"
+    ],
+    link: "https://github.com/your-username/your-kafka-repo"
   },
   {
     title: "Power BI Sales Dashboard",
-    desc: "Executive dashboard with DAX KPIs, clean visuals, and drilldown insights.",
-    tags: ["Power BI", "DAX", "KPIs"],
-    github: "https://github.com/",
-    demo: ""
-  },
-];
-
-const projectGrid = document.getElementById("projectGrid");
-const filtersEl = document.getElementById("filters");
-
-const allTags = ["All", ...new Set(projects.flatMap(p => p.tags))];
-let activeTag = "All";
-
-function renderFilters(){
-  filtersEl.innerHTML = "";
-  allTags.forEach(t => {
-    const b = document.createElement("button");
-    b.className = "filterBtn" + (t === activeTag ? " active" : "");
-    b.textContent = t;
-    b.onclick = () => {
-      activeTag = t;
-      renderFilters();
-      renderProjects();
-    };
-    filtersEl.appendChild(b);
-  });
-}
-
-function renderProjects(){
-  projectGrid.innerHTML = "";
-  const visible = activeTag === "All" ? projects : projects.filter(p => p.tags.includes(activeTag));
-
-  visible.forEach(p => {
-    const el = document.createElement("article");
-    el.className = "card projectCard";
-    el.innerHTML = `
-      <h3 class="cardTitle">${p.title}</h3>
-      <p class="muted">${p.desc}</p>
-      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-      <div class="linksRow">
-        <a href="${p.github}" target="_blank" rel="noreferrer">GitHub</a>
-        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noreferrer">Demo</a>` : `<span class="muted">Demo</span>`}
-      </div>
-    `;
-    projectGrid.appendChild(el);
-  });
-}
-
-renderFilters();
-renderProjects();
-
-// Testimonials (optional)
-const testimonials = [
-  {
-    name: "Name Here",
-    role: "Manager / Professor",
-    quote: "Rachana is sharp, organized, and delivers high-quality dashboards and analysis."
+    type: "BI / Analytics",
+    tags: ["Power BI", "DAX", "KPI", "Data Modeling"],
+    blurb: "Interactive KPI dashboard with clean metric definitions and executive-ready views.",
+    stack: ["Power BI", "DAX", "Power Query", "Excel/CSV"],
+    highlights: [
+      "Star schema modeling + reusable measures",
+      "KPI drilldowns and variance breakdowns",
+      "Designed for weekly/monthly business reviews"
+    ],
+    link: "https://github.com/your-username/your-powerbi-repo"
   },
   {
-    name: "Name Here",
-    role: "Senior Stakeholder",
-    quote: "Strong SQL and a great ability to translate business questions into metrics."
+    title: "Financial Data Analysis (Signals + Insights)",
+    type: "Analytics",
+    tags: ["Python", "Pandas", "Power BI", "EDA"],
+    blurb: "Analysis of financial datasets with trend/variance insights and clear storytelling.",
+    stack: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI"],
+    highlights: [
+      "Cleaned + transformed raw data into analysis-ready frames",
+      "Created repeatable analysis workflow and visuals",
+      "Summarized insights into decision recommendations"
+    ],
+    link: "https://github.com/your-username/your-finance-repo"
+  },
+  {
+    title: "Healthcare Analytics Capstone",
+    type: "Domain Analytics",
+    tags: ["Healthcare", "SQL", "Tableau", "BigQuery"],
+    blurb: "Outcome-focused analytics project with SQL + dashboards for stakeholders.",
+    stack: ["SQL", "Python", "Tableau", "BigQuery", "S3"],
+    highlights: [
+      "Defined metrics aligned to business questions",
+      "Built dashboards with transparent definitions",
+      "Produced insights with clear stakeholder narrative"
+    ],
+    link: "https://github.com/your-username/your-healthcare-repo"
+  },
+  {
+    title: "Synthetic Data Generator (GenAI)",
+    type: "GenAI",
+    tags: ["GenAI", "Python", "Data Quality"],
+    blurb: "Generated realistic synthetic datasets with validation and quality checks.",
+    stack: ["Python", "Pandas", "LLM API", "Validation Rules"],
+    highlights: [
+      "Generated constrained synthetic rows for testing",
+      "Quality validation + schema consistency checks",
+      "Reusable pipeline for multiple dataset shapes"
+    ],
+    link: "https://github.com/your-username/your-synthetic-data-repo"
   }
 ];
 
-const testWrap = document.getElementById("testWrap");
-testWrap.innerHTML = testimonials.map(t => `
-  <article class="card">
-    <h3 class="cardTitle">${t.name}</h3>
-    <p class="muted">${t.role}</p>
-    <p style="margin:10px 0 0;" class="muted">“${t.quote}”</p>
-  </article>
-`).join("");
+const SKILLS = [
+  {
+    group: "Data Engineering Core",
+    items: ["SQL (CTEs, Window Functions)", "ETL/ELT", "Data Modeling", "Data Quality", "Orchestration", "APIs"]
+  },
+  {
+    group: "AWS + Cloud",
+    items: ["S3", "Glue", "Lambda", "Athena", "Redshift", "Step Functions", "CloudWatch", "IAM", "Terraform (basic)"]
+  },
+  {
+    group: "Streaming + Big Data",
+    items: ["Apache Kafka", "Kafka Connect", "Spark / PySpark", "CDC Concepts", "Docker", "Monitoring"]
+  },
+  {
+    group: "Analytics + BI",
+    items: ["Power BI", "DAX", "Power Query", "Tableau", "KPI Design", "A/B Testing basics", "Stakeholder Reporting"]
+  },
+  {
+    group: "Python + Data",
+    items: ["Pandas", "NumPy", "Matplotlib", "Automation Scripts", "Data Validation", "Notebook Workflows"]
+  },
+  {
+    group: "Professional",
+    items: ["Requirements Gathering", "Documentation", "Cross-functional Collaboration", "Problem Solving", "Ownership"]
+  }
+];
 
-// Contact form (GitHub Pages can't send emails without backend)
-const form = document.getElementById("contactForm");
-const formNote = document.getElementById("formNote");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  formNote.textContent = "GitHub Pages can’t send messages without a backend. Use the Email link (or add Formspree later).";
-});
+const EXPERIENCE = [
+  {
+    role: "Business Analyst / Data Analyst",
+    company: "NB Alpha Omega",
+    when: "Sep 2024 — Present",
+    where: "USA",
+    bullets: [
+      "Built and maintained analytics datasets and KPI definitions for recurring business reviews.",
+      "Developed Power BI dashboards for operational, financial, and campaign performance tracking.",
+      "Wrote optimized SQL for ad-hoc analysis and decision support across large tables.",
+      "Automated recurring data checks and reporting workflows using Python."
+    ]
+  },
+  {
+    role: "Project Engineer",
+    company: "Wipro",
+    when: "May 2021 — Jun 2022",
+    where: "India / Client projects",
+    bullets: [
+      "Supported data pipelines and reporting workflows with SQL and cloud-based tooling.",
+      "Built dashboards and recurring reports aligned with stakeholder requirements.",
+      "Collaborated across teams to deliver clean data outputs and consistent metrics."
+    ]
+  }
+];
+/* ========= End edit block ========= */
+
+
+/* ---------- Helpers ---------- */
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+function toast(msg){
+  const el = $("#toast");
+  if(!el) return;
+  el.textContent = msg;
+  el.style.opacity = "1";
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => (el.style.opacity = "0"), 1600);
+}
+
+function setLinks(){
+  $("#lnkLinkedIn").href = PROFILE.links.linkedin;
+  $("#lnkGitHub").href = PROFILE.links.github;
+  $("#lnkTableau").href = PROFILE.links.tableau;
+  $("#lnkPowerBI").href = PROFILE.links.powerbi;
+
+  $("#cLinkedIn").href = PROFILE.links.linkedin;
+  $("#cGitHub").href = PROFILE.links.github;
+  $("#cMedium").href = PROFILE.links.medium;
+
+  const mailHref = `mailto:${PROFILE.email}?subject=Opportunity%20—%20${encodeURIComponent(PROFILE.name)}`;
+  $("#mailBtn").href = mailHref;
+}
+
+/* ---------- Theme ---------- */
+function loadTheme(){
+  const t = localStorage.getItem("theme") || "dark";
+  if(t === "light") document.documentElement.setAttribute("data-theme","light");
+  $("#themeIcon").textContent = (t === "light") ? "☀" : "☾";
+}
+function toggleTheme(){
+  const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+  const next = current === "light" ? "dark" : "light";
+  if(next === "light") document.documentElement.setAttribute("data-theme","light");
+  else document.documentElement.removeAttribute("data-theme");
+  localStorage.setItem("theme", next);
+  $("#themeIcon").textContent = (next === "light") ? "☀" : "☾";
+}
+
+/* ---------- Mobile menu ---------- */
+function toggleMobile(open){
+  const menu = $("#mobileMenu");
+  const ham = $("#hamburger");
+  const isOpen = menu.classList.contains("show");
+  const next = (open !== undefined) ? open : !isOpen;
+
+  menu.classList.toggle("show", next);
+  menu.setAttribute("aria-hidden", String(!next));
+  ham.setAttribute("aria-expanded", String(next));
+}
+
+/* ---------- Cursor glow ---------- */
+function initCursorGlow(){
+  const glow = $("#cursorGlow");
+  if(!glow) return;
+  window.addEventListener("mousemove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  }, { passive: true });
+}
+
+/* ---------- Terminal ---------- */
+const TERM_LINES = {
+  pipelines: [
+    "> pipelines: online",
+    "> ingestion: stable",
+    "> transforms: deterministic",
+    "> quality gates: enforced",
+    "> output: analytics-ready"
+  ],
+  dashboards: [
+    "> dashboards: clean",
+    "> model: star schema",
+    "> measures: reusable",
+    "> filters: fast",
+    "> story: decision-first"
+  ],
+  metrics: [
+    "> KPI definitions: versioned",
+    "> grain: consistent",
+    "> thresholds: explicit",
+    "> owners: assigned",
+    "> actions: measurable"
+  ],
+  governance: [
+    "> lineage: tracked",
+    "> access: least-privilege",
+    "> docs: crisp",
+    "> audits: painless",
+    "> humans: happy"
+  ]
+};
+
+function renderTerminal(lines){
+  const box = $("#terminal");
+  box.innerHTML = lines.map(l => `<div class="line"><span class="prompt">></span> ${escapeHtml(l.replace(/^>\s?/, ""))}</div>`).join("");
+}
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function initTerminal(){
+  const chips = $$(".chip");
+  chips.forEach(btn => btn.addEventListener("click", () => {
