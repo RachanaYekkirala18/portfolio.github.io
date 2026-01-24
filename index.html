@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rachana | Data Analyst / Data Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Rachana — Data Analyst / Data Engineer (SQL, Python, AWS, Power BI)."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a class="brand" href="#top">Rachana</a>
+
+        <button class="menuBtn" id="menuBtn" aria-label="Open menu">
+          ☰
+        </button>
+
+        <div class="navLinks" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a class="pill" href="#resume">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="container">
+      <section class="hero">
+        <div class="heroLeft">
+          <p class="kicker">Data Analyst / Data Engineer</p>
+          <h1 class="title">
+            I build clean, reliable data pipelines and dashboards that help teams
+            make faster decisions.
+          </h1>
+          <p class="subtitle">
+            SQL • Python • AWS • Power BI • Tableau • ETL/ELT • Analytics
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+
+          <div class="linkRow">
+            <!-- Replace these with your real links -->
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#resume">Resume</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <div class="statGrid">
+            <div class="stat">
+              <div class="statNum">10M+</div>
+              <div class="statLabel">Records processed</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">30–45%</div>
+              <div class="statLabel">Efficiency gains</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">8–12</div>
+              <div class="statLabel">Power BI dashboards</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">AWS</div>
+              <div class="statLabel">S3 • Glue • Lambda • Athena</div>
+            </div>
+          </div>
+          <p class="note">
+            Tip: Replace metrics above with your exact numbers if you want.
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+          I’m Rachana, a Master’s in Data Science graduate (UMBC, May 2024) with
+          experience across analytics and data engineering. I work with SQL and
+          Python to analyze large datasets, build automated reporting, and deliver
+          Power BI dashboards. I’m also comfortable building cloud-based ETL
+          pipelines on AWS.
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <div class="chips">
+          <span class="chip">SQL (CTEs, Window Functions)</span>
+          <span class="chip">Python (Pandas, PySpark)</span>
+          <span class="chip">AWS (S3, Glue, Lambda, Athena)</span>
+          <span class="chip">Power BI (DAX, Power Query)</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">ETL/ELT • Data Modeling</span>
+          <span class="chip">Kafka (Streaming)</span>
+          <span class="chip">Git • Docker</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="row">
+          <h2>Projects</h2>
+          <a class="smallLink" href="https://github.com/" target="_blank" rel="noreferrer">
+            View all on GitHub →
+          </a>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>AWS Data Lakehouse Pipeline</h3>
+            <p>
+              Built a medallion-style lakehouse using S3, Glue, Lambda, Step Functions,
+              Athena/Redshift and dashboards for business reporting.
+            </p>
+            <div class="tags">
+              <span>AWS</span><span>PySpark</span><span>ETL</span><span>Lakehouse</span>
+            </div>
+            <div class="cardLinks">
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" class="muted">Case Study</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Kafka Clickstream Streaming Pipeline</h3>
+            <p>
+              Real-time ingestion with Kafka + Connect, Python consumers, PostgreSQL sink,
+              and monitoring via Grafana.
+            </p>
+            <div class="tags">
+              <span>Kafka</span><span>Python</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+            <div class="cardLinks">
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" class="muted">Architecture</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Power BI Sales Dashboard</h3>
+            <p>
+              Built an interactive KPI dashboard with DAX measures, data modeling,
+              and executive-ready visuals for decision support.
+            </p>
+            <div class="tags">
+              <span>Power BI</span><span>DAX</span><span>Modeling</span><span>KPIs</span>
+            </div>
+            <div class="cardLinks">
+              <a href="#" class="muted">Demo</a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">Files</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <div class="item">
+            <div class="itemTop">
+              <h3>Business Analyst — NB Alpha Omega</h3>
+              <span class="meta">Sep 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Built data ingestion and reporting datasets for operational and campaign analytics.</li>
+              <li>Developed and maintained Power BI dashboards used in weekly/monthly reviews.</li>
+              <li>Wrote optimized SQL for ad-hoc analysis across large tables.</li>
+              <li>Automated reporting and checks in Python to reduce manual work.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="itemTop">
+              <h3>Project Engineer — Wipro</h3>
+              <span class="meta">May 2021 – Jun 2022</span>
+            </div>
+            <ul>
+              <li>Supported analytics and reporting workflows using SQL and BI tools.</li>
+              <li>Worked with stakeholders to define KPIs and deliver dashboards.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <h2>Resume</h2>
+        <p>
+          Add your resume PDF into this repo and link it here.
+        </p>
+
+        <ol class="steps">
+          <li>Upload your PDF to this repo (example name: <b>Rachana_Resume.pdf</b>)</li>
+          <li>Update the link below to match the file name</li>
+        </ol>
+
+        <a class="btn primary" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">
+          Download Resume
+        </a>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Best way to reach me: email or LinkedIn.</p>
+
+        <div class="contactCard">
+          <!-- Replace with your real email -->
+          <a class="btn primary" href="mailto:yourname@email.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Rachana • Built on GitHub Pages</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
