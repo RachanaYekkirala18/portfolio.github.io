@@ -1,348 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Rachana Yekkirala — Data Engineer / Analyst portfolio"/>
-  <title>Rachana | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rachana | Data Systems</title>
+  <meta name="description" content="Rachana — calm data systems. Pipelines, metrics, and dashboards people trust." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Ambient: gradient + orbs + grid + noise -->
-  <div class="ambient" aria-hidden="true">
-    <div class="aurora"></div>
-    <div class="orb o1"></div>
-    <div class="orb o2"></div>
-    <div class="orb o3"></div>
-    <div class="grid"></div>
-    <div class="noise"></div>
-  </div>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#top">Rachana data systems</a>
 
-  <!-- Top bar -->
-  <header class="topbar" id="top">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="dot"></span>
-        <span class="brand-text">Rachana</span>
-      </a>
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#about" class="navlink">About</a>
-        <a href="#projects" class="navlink">Projects</a>
-        <a href="#skills" class="navlink">Skills</a>
-        <a href="#experience" class="navlink">Experience</a>
-        <a href="#contact" class="navlink">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-          <span id="themeIcon">☾</span>
-        </button>
-        <a class="btn primary" id="resumeLink" href="#" target="_blank" rel="noreferrer">Resume</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="pillLink">Contact</a>
       </div>
-    </div>
+    </nav>
 
-    <div class="mobile" id="mobile" aria-hidden="true">
-      <div class="wrap mobile-inner">
-        <a href="#about" class="mobilelink">About</a>
-        <a href="#projects" class="mobilelink">Projects</a>
-        <a href="#skills" class="mobilelink">Skills</a>
-        <a href="#experience" class="mobilelink">Experience</a>
-        <a href="#contact" class="mobilelink">Contact</a>
-        <div class="mobile-cta">
-          <a class="btn primary full" href="#" target="_blank" rel="noreferrer" id="resumeLink2">Resume</a>
-        </div>
-      </div>
+    <div class="mobile" id="mobile">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="pillLink">Contact</a>
     </div>
   </header>
 
-  <main>
+  <main id="top" class="container">
     <!-- HERO -->
-    <section class="wrap hero">
-      <div class="hero-left">
-        <div class="status">
-          <span class="pulse"></span>
-          <span id="statusText">Open to Data Engineer / Analyst roles</span>
-        </div>
+    <section class="hero">
+      <p class="pill">Open to Data Engineer / Analyst roles</p>
 
-        <h1 class="h1">
-          I turn messy data into calm decisions.
-          <span class="h1-soft">Pipelines, dashboards, and metrics teams actually trust.</span>
-        </h1>
+      <h1 class="h1">
+        Calm data systems.<br />
+        Pipelines, metrics, and dashboards<br />
+        people actually trust.
+      </h1>
 
-        <p class="lead">
-          I’m <b>Venkata Rachana Yekkirala</b> — focused on <b>AWS, SQL, Python, BI</b>.
-          I build reliable ingestion + transformation flows and ship clear analytics experiences.
-        </p>
+      <p class="sub">
+        I’m <b>Venkata Rachana Yekkirala</b>. I build AWS + SQL + Python workflows that make raw data
+        reliable, measurable, and decision-ready.
+      </p>
 
-        <div class="hero-cta">
-          <a class="btn primary" href="#projects">Explore Projects</a>
-          <button class="btn ghost" id="copyEmailBtn">Copy Email</button>
-        </div>
-
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-k">Impact</div>
-            <div class="metric-v">10M+ records handled</div>
-          </div>
-          <div class="metric">
-            <div class="metric-k">Speed</div>
-            <div class="metric-v">30–45% efficiency wins</div>
-          </div>
-          <div class="metric">
-            <div class="metric-k">Stack</div>
-            <div class="metric-v">AWS • SQL • Python • BI</div>
-          </div>
-        </div>
-
-        <div class="links">
-          <a class="chiplink" id="emailLink" href="mailto:your.email@example.com">Email</a>
-          <a class="chiplink" id="linkedinLink" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="chiplink" id="githubLink" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chiplink" id="mediumLink" href="#" target="_blank" rel="noreferrer">Medium</a>
-        </div>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Explore projects</a>
+        <a class="btn" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
 
-      <div class="hero-right">
-        <div class="humanoid-card">
-          <div class="humanoid-top">
-            <div class="eye"></div>
-            <div class="eye"></div>
-            <div class="glow"></div>
-          </div>
-          <div class="humanoid-body">
-            <div class="scanline"></div>
-            <div class="humanoid-title">Signal Console</div>
-            <div class="humanoid-sub">Your data, translated into actions.</div>
-
-            <div class="console">
-              <div class="row">
-                <span class="tag">ETL</span>
-                <span class="txt">Built ingestion + validation</span>
-              </div>
-              <div class="row">
-                <span class="tag">SQL</span>
-                <span class="txt">Optimized queries & KPIs</span>
-              </div>
-              <div class="row">
-                <span class="tag">BI</span>
-                <span class="txt">Dashboards for weekly reviews</span>
-              </div>
-              <div class="row">
-                <span class="tag">Cloud</span>
-                <span class="txt">AWS-first, multi-cloud ready</span>
-              </div>
-            </div>
-
-            <div class="humanoid-foot">
-              <div class="mini-pill">Reliable</div>
-              <div class="mini-pill">Fast</div>
-              <div class="mini-pill">Clean</div>
-            </div>
-          </div>
+      <div class="meta">
+        <div>
+          <span>CORE</span>
+          <p>AWS · SQL · Python · BI</p>
+        </div>
+        <div>
+          <span>FOCUS</span>
+          <p>ETL · KPI Design · Analytics</p>
+        </div>
+        <div>
+          <span>SIGNAL</span>
+          <p>10M+ rows through projects</p>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT (variety layout: split + floating cards) -->
-    <section class="wrap section" id="about">
-      <div class="section-head">
+    <hr class="rule" />
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="sectionHead">
         <h2>About</h2>
-        <p class="muted">Short, human, and focused on outcomes.</p>
+        <p class="muted">
+          Master’s in Data Science (UMBC, May 2024). I combine analytics and engineering:
+          I define KPIs, build reporting datasets, and ship dashboards that stakeholders actually use.
+        </p>
       </div>
 
-      <div class="about-grid">
-        <div class="glass about-main">
-          <h3 class="h3">What I’m known for</h3>
-          <p>
-            I combine <b>engineering discipline</b> with <b>business clarity</b>.
-            My sweet spot is building pipelines that keep data fresh, clean, and explainable —
-            and turning it into dashboards and decision metrics people actually use.
+      <div class="twoCol">
+        <div>
+          <h3>What I do</h3>
+          <p class="muted">
+            I take ambiguous business questions and turn them into clean metrics, reproducible analysis,
+            and dashboards. When the workflow is repetitive, I automate it with Python.
           </p>
-
-          <div class="about-highlights">
-            <div class="hl">
-              <div class="hl-title">Data Products</div>
-              <div class="hl-text">KPI design • metric definitions • governance basics</div>
-            </div>
-            <div class="hl">
-              <div class="hl-title">Engineering</div>
-              <div class="hl-text">Batch/stream ingestion • ETL/ELT • testing & validation</div>
-            </div>
-            <div class="hl">
-              <div class="hl-title">Analytics</div>
-              <div class="hl-text">Ad-hoc SQL • variance analysis • stakeholder storytelling</div>
-            </div>
-          </div>
         </div>
 
-        <div class="about-side">
-          <div class="glass floatcard">
-            <div class="float-title">Current focus</div>
-            <div class="float-text">Data Engineering + BI for business teams</div>
-          </div>
-          <div class="glass floatcard">
-            <div class="float-title">Tools I reach for</div>
-            <div class="float-text">AWS, SQL, Python, Power BI, Spark</div>
-          </div>
-          <div class="glass floatcard">
-            <div class="float-title">I care about</div>
-            <div class="float-text">Quality checks, clarity, and measurable impact</div>
-          </div>
+        <div>
+          <h3>What I optimize for</h3>
+          <ul class="list">
+            <li>Clear KPI definitions and data trust</li>
+            <li>Fast SQL and low-friction reporting</li>
+            <li>Simple, maintainable pipelines</li>
+            <li>Decision-ready dashboards</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS (variety: filters + masonry-ish cards + modal) -->
-    <section class="wrap section" id="projects">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">A few builds that show real capability.</p>
-      </div>
+    <hr class="rule" />
 
-      <div class="project-controls glass">
-        <div class="filters" id="filters"></div>
-        <div class="searchbox">
-          <input id="projectSearch" type="text" placeholder="Search projects (e.g., lakehouse, kafka, power bi)" autocomplete="off"/>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="sectionHeadRow">
+        <div>
+          <h2>Projects</h2>
+          <p class="muted">A few builds that show how I work.</p>
+        </div>
+
+        <div class="filterWrap">
+          <button class="filter active" data-tag="All">All</button>
+          <button class="filter" data-tag="AWS">AWS</button>
+          <button class="filter" data-tag="Kafka">Kafka</button>
+          <button class="filter" data-tag="Power BI">Power BI</button>
         </div>
       </div>
 
-      <div class="projects-grid" id="projectsGrid"></div>
+      <div class="projList" id="projList"></div>
     </section>
 
-    <!-- SKILLS (variety: chips + meters + categories) -->
-    <section class="wrap section" id="skills">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">Grouped for readability, not buzzwords.</p>
+    <hr class="rule" />
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="sectionHeadRow">
+        <div>
+          <h2>Skills</h2>
+          <p class="muted">Tools I use to ship reliable analytics.</p>
+        </div>
+
+        <input id="skillSearch" class="search" placeholder="Search: SQL, AWS, Power BI..." />
       </div>
 
-      <div class="skills-grid">
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Core</h3>
-            <p class="muted small">The stack I use most.</p>
-          </div>
-          <div class="chips" id="coreChips"></div>
-        </div>
-
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Strength meters</h3>
-            <p class="muted small">A quick signal of depth.</p>
-          </div>
-          <div class="meters" id="meters"></div>
-        </div>
-
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Tools</h3>
-            <p class="muted small">Cloud + pipelines + BI.</p>
-          </div>
-          <div class="chips" id="toolChips"></div>
-        </div>
-      </div>
+      <div class="skillGrid" id="skillGrid"></div>
     </section>
 
-    <!-- EXPERIENCE (variety: timeline) -->
-    <section class="wrap section" id="experience">
-      <div class="section-head">
+    <hr class="rule" />
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="sectionHead">
         <h2>Experience</h2>
-        <p class="muted">Clean timeline with outcomes.</p>
+        <p class="muted">Clean, impact-first bullets. No fluff.</p>
       </div>
 
-      <div class="timeline glass" id="timeline"></div>
+      <div class="exp" id="exp"></div>
     </section>
+
+    <hr class="rule" />
 
     <!-- CONTACT -->
-    <section class="wrap section" id="contact">
-      <div class="section-head">
+    <section id="contact" class="section">
+      <div class="sectionHead">
         <h2>Contact</h2>
-        <p class="muted">If you’re hiring, I respond fast.</p>
+        <p class="muted">If you’re hiring for analytics, BI, or data roles, email works best.</p>
       </div>
 
-      <div class="contact-grid">
-        <div class="glass contact-card">
-          <h3 class="h3">Let’s talk</h3>
-          <p class="muted">Email is best. I can also share a tailored resume for the role.</p>
-
-          <div class="contact-actions">
-            <a class="btn primary" id="emailBtn" href="mailto:your.email@example.com">Email me</a>
-            <button class="btn ghost" id="copyEmailBtn2">Copy Email</button>
-          </div>
-
-          <div class="contact-mini">
-            <a class="chiplink" id="linkedinLink2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="chiplink" id="githubLink2" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+      <div class="contact">
+        <div>
+          <div class="label">Email</div>
+          <div class="big" id="emailText">yourname@email.com</div>
+          <div class="muted small">Replace with your email in script.js</div>
         </div>
 
-        <div class="glass contact-card">
-          <h3 class="h3">Quick note</h3>
-          <form id="noteForm">
-            <label class="label">Your name</label>
-            <input class="input" id="nameInput" placeholder="Name" required />
-
-            <label class="label">Message</label>
-            <textarea class="input area" id="msgInput" placeholder="What are you hiring for?" required></textarea>
-
-            <button class="btn primary full" type="submit">Generate email draft</button>
-            <p class="muted small" id="draftHint"></p>
-          </form>
+        <div class="contactBtns">
+          <a class="btn primary" id="emailBtn" href="mailto:yourname@email.com">Email me</a>
+          <a class="btn" id="linkedinBtn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" id="githubBtn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </section>
 
-    <footer class="wrap footer">
-      <div class="muted small">© <span id="year"></span> Rachana — built for GitHub Pages.</div>
-      <a class="muted small backtop" href="#top">Back to top ↑</a>
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Rachana</p>
     </footer>
   </main>
-
-  <!-- Project Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card glass" role="document">
-      <div class="modal-head">
-        <div>
-          <div class="modal-title" id="modalTitle">Project</div>
-          <div class="modal-sub" id="modalSub">Stack • Outcome</div>
-        </div>
-        <button class="iconbtn" id="closeModal" aria-label="Close">✕</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-block">
-          <div class="label muted small">What it does</div>
-          <p id="modalDesc"></p>
-        </div>
-
-        <div class="modal-block">
-          <div class="label muted small">Highlights</div>
-          <ul class="bullets" id="modalBullets"></ul>
-        </div>
-
-        <div class="modal-block">
-          <div class="label muted small">Tech</div>
-          <div class="chips" id="modalTech"></div>
-        </div>
-
-        <div class="modal-actions">
-          <a class="btn primary" id="modalLink" href="#" target="_blank" rel="noreferrer">View Repo</a>
-          <button class="btn ghost" id="copyProjectBtn">Copy project summary</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
