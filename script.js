@@ -1,183 +1,164 @@
-/* ========= Edit only this block ========= */
+/* ========= EDIT THESE ONLY ========= */
 const PROFILE = {
   name: "Venkata Rachana Yekkirala",
   email: "your.email@gmail.com",
-  phone: "+1-XXX-XXX-XXXX",
+  resume: "resume.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/your-link/",
     github: "https://github.com/your-username",
     tableau: "https://public.tableau.com/app/profile/your-name",
-    powerbi: "https://app.powerbi.com/",
     medium: "https://medium.com/@your-handle"
   }
 };
 
-// Projects + experience prefilled (based on what you typically work on)
-// Replace repo links with your actual GitHub repo URLs.
+const ABOUT_PILLS = [
+  "ETL/ELT pipelines", "KPI definitions", "SQL optimization", "Power BI dashboards",
+  "Data quality checks", "Streaming basics", "Stakeholder communication"
+];
+
+const FACTS = [
+  { k: "Degree", v: "MS Data Science" },
+  { k: "Focus", v: "Data Engineering + BI" },
+  { k: "Primary", v: "AWS • SQL • Python" },
+  { k: "Style", v: "Clean metrics, calm execution" }
+];
+
 const PROJECTS = [
   {
     title: "AWS Data Lakehouse Pipeline",
     type: "Data Engineering",
-    tags: ["AWS", "S3", "Glue", "Athena", "Lambda", "Medallion"],
-    blurb: "Built a lakehouse-style pipeline with curated layers and query-ready analytics datasets.",
-    stack: ["S3", "Glue", "Lambda", "Step Functions", "Athena", "Redshift", "QuickSight", "PySpark"],
-    highlights: [
-      "Medallion architecture: bronze → silver → gold datasets",
-      "Data validation + quality checks before publishing",
-      "Query-ready tables optimized for analytics workloads"
+    desc: "Lakehouse pipeline with curated layers (bronze/silver/gold) and analytics-ready datasets.",
+    tags: ["S3","Glue","Athena","Lambda","Medallion"],
+    bullets: [
+      "Built layered datasets with validation before publishing.",
+      "Optimized tables for fast analytics queries.",
+      "Designed reusable patterns for ingestion + transformation."
     ],
+    tech: ["S3","Glue","Lambda","Athena","Redshift","PySpark"],
     link: "https://github.com/your-username/your-lakehouse-repo"
   },
   {
     title: "Kafka Clickstream Streaming Pipeline",
     type: "Streaming",
-    tags: ["Kafka", "CDC", "Docker", "PostgreSQL", "Monitoring"],
-    blurb: "Real-time ingestion + processing pipeline for clickstream analytics with monitoring.",
-    stack: ["Kafka", "Kafka Connect", "Python", "PostgreSQL", "Docker", "Grafana"],
-    highlights: [
-      "Streaming ingestion with connectors + durable topics",
-      "Consumers transform/validate events for analytics",
-      "Dashboards for throughput, lag, and error rates"
+    desc: "Real-time ingestion + processing pipeline for clickstream analytics with monitoring.",
+    tags: ["Kafka","Connect","Docker","PostgreSQL"],
+    bullets: [
+      "Durable topics with producer/consumer patterns.",
+      "Validation + transformations for downstream analytics.",
+      "Monitoring for throughput, lag, and failures."
     ],
+    tech: ["Kafka","Kafka Connect","Python","PostgreSQL","Docker","Grafana"],
     link: "https://github.com/your-username/your-kafka-repo"
   },
   {
-    title: "Power BI Sales Dashboard",
+    title: "Power BI KPI Dashboard",
     type: "BI / Analytics",
-    tags: ["Power BI", "DAX", "KPI", "Data Modeling"],
-    blurb: "Interactive KPI dashboard with clean metric definitions and executive-ready views.",
-    stack: ["Power BI", "DAX", "Power Query", "Excel/CSV"],
-    highlights: [
-      "Star schema modeling + reusable measures",
-      "KPI drilldowns and variance breakdowns",
-      "Designed for weekly/monthly business reviews"
+    desc: "Executive-ready KPI dashboard with clean metric definitions and drilldowns.",
+    tags: ["Power BI","DAX","Modeling","KPI"],
+    bullets: [
+      "Built star schema model + reusable measures.",
+      "KPI drilldowns with variance breakdowns.",
+      "Designed for weekly/monthly business reviews."
     ],
+    tech: ["Power BI","DAX","Power Query","SQL"],
     link: "https://github.com/your-username/your-powerbi-repo"
-  },
-  {
-    title: "Financial Data Analysis (Signals + Insights)",
-    type: "Analytics",
-    tags: ["Python", "Pandas", "Power BI", "EDA"],
-    blurb: "Analysis of financial datasets with trend/variance insights and clear storytelling.",
-    stack: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI"],
-    highlights: [
-      "Cleaned + transformed raw data into analysis-ready frames",
-      "Created repeatable analysis workflow and visuals",
-      "Summarized insights into decision recommendations"
-    ],
-    link: "https://github.com/your-username/your-finance-repo"
   },
   {
     title: "Healthcare Analytics Capstone",
     type: "Domain Analytics",
-    tags: ["Healthcare", "SQL", "Tableau", "BigQuery"],
-    blurb: "Outcome-focused analytics project with SQL + dashboards for stakeholders.",
-    stack: ["SQL", "Python", "Tableau", "BigQuery", "S3"],
-    highlights: [
-      "Defined metrics aligned to business questions",
-      "Built dashboards with transparent definitions",
-      "Produced insights with clear stakeholder narrative"
+    desc: "Outcome-focused analytics project with SQL + dashboards for stakeholders.",
+    tags: ["SQL","Tableau","BigQuery","Healthcare"],
+    bullets: [
+      "Defined metrics aligned to business questions.",
+      "Built dashboards with transparent definitions.",
+      "Delivered insights with clear stakeholder narrative."
     ],
+    tech: ["SQL","Python","Tableau","BigQuery"],
     link: "https://github.com/your-username/your-healthcare-repo"
   },
   {
     title: "Synthetic Data Generator (GenAI)",
     type: "GenAI",
-    tags: ["GenAI", "Python", "Data Quality"],
-    blurb: "Generated realistic synthetic datasets with validation and quality checks.",
-    stack: ["Python", "Pandas", "LLM API", "Validation Rules"],
-    highlights: [
-      "Generated constrained synthetic rows for testing",
-      "Quality validation + schema consistency checks",
-      "Reusable pipeline for multiple dataset shapes"
+    desc: "Generated realistic synthetic datasets with validation and schema consistency.",
+    tags: ["Python","GenAI","Validation"],
+    bullets: [
+      "Created constrained synthetic rows for testing.",
+      "Validation rules for quality + schema checks.",
+      "Reusable generator for multiple dataset shapes."
     ],
+    tech: ["Python","Pandas","LLM API","Validation"],
     link: "https://github.com/your-username/your-synthetic-data-repo"
+  },
+  {
+    title: "Financial Insights (Python)",
+    type: "Analytics",
+    desc: "Clean EDA workflow with trend/variance insights and decision-friendly summaries.",
+    tags: ["Python","Pandas","EDA"],
+    bullets: [
+      "Transformed raw datasets into analysis-ready frames.",
+      "Built repeatable analysis workflow and visuals.",
+      "Summarized insights into recommendations."
+    ],
+    tech: ["Python","Pandas","NumPy","Matplotlib"],
+    link: "https://github.com/your-username/your-finance-repo"
   }
 ];
 
 const SKILLS = [
-  {
-    group: "Data Engineering Core",
-    items: ["SQL (CTEs, Window Functions)", "ETL/ELT", "Data Modeling", "Data Quality", "Orchestration", "APIs"]
-  },
-  {
-    group: "AWS + Cloud",
-    items: ["S3", "Glue", "Lambda", "Athena", "Redshift", "Step Functions", "CloudWatch", "IAM", "Terraform (basic)"]
-  },
-  {
-    group: "Streaming + Big Data",
-    items: ["Apache Kafka", "Kafka Connect", "Spark / PySpark", "CDC Concepts", "Docker", "Monitoring"]
-  },
-  {
-    group: "Analytics + BI",
-    items: ["Power BI", "DAX", "Power Query", "Tableau", "KPI Design", "A/B Testing basics", "Stakeholder Reporting"]
-  },
-  {
-    group: "Python + Data",
-    items: ["Pandas", "NumPy", "Matplotlib", "Automation Scripts", "Data Validation", "Notebook Workflows"]
-  },
-  {
-    group: "Professional",
-    items: ["Requirements Gathering", "Documentation", "Cross-functional Collaboration", "Problem Solving", "Ownership"]
-  }
+  { group: "Data Engineering", items: ["SQL (CTE, Window)", "ETL/ELT", "Data Modeling", "Data Quality", "Orchestration"] },
+  { group: "AWS", items: ["S3", "Glue", "Lambda", "Athena", "Redshift", "CloudWatch", "IAM"] },
+  { group: "Streaming / Big Data", items: ["Kafka", "Kafka Connect", "Spark / PySpark", "Docker", "Monitoring"] },
+  { group: "BI / Analytics", items: ["Power BI", "DAX", "Power Query", "Tableau", "KPI Design"] },
+  { group: "Python", items: ["Pandas", "NumPy", "Automation", "Validation", "Notebook Workflows"] },
+  { group: "Professional", items: ["Requirements", "Documentation", "Stakeholders", "Ownership", "Problem Solving"] }
 ];
 
 const EXPERIENCE = [
   {
     role: "Business Analyst / Data Analyst",
-    company: "NB Alpha Omega",
+    org: "NB Alpha Omega",
     when: "Sep 2024 — Present",
     where: "USA",
     bullets: [
-      "Built and maintained analytics datasets and KPI definitions for recurring business reviews.",
-      "Developed Power BI dashboards for operational, financial, and campaign performance tracking.",
-      "Wrote optimized SQL for ad-hoc analysis and decision support across large tables.",
-      "Automated recurring data checks and reporting workflows using Python."
+      "Defined KPIs and maintained analytics datasets for recurring business reviews.",
+      "Built Power BI dashboards for operational and performance tracking.",
+      "Wrote optimized SQL for ad-hoc analysis and decision support.",
+      "Automated data checks and reporting workflows using Python."
     ]
   },
   {
     role: "Project Engineer",
-    company: "Wipro",
+    org: "Wipro",
     when: "May 2021 — Jun 2022",
-    where: "India / Client projects",
+    where: "Client projects",
     bullets: [
-      "Supported data pipelines and reporting workflows with SQL and cloud-based tooling.",
-      "Built dashboards and recurring reports aligned with stakeholder requirements.",
-      "Collaborated across teams to deliver clean data outputs and consistent metrics."
+      "Supported data workflows and reporting using SQL and cloud tooling.",
+      "Built dashboards and recurring reports aligned to stakeholder needs.",
+      "Delivered consistent metric outputs with clear documentation."
     ]
   }
 ];
-/* ========= End edit block ========= */
+/* ========= END EDIT ========= */
 
-
-/* ---------- Helpers ---------- */
-const $ = (sel) => document.querySelector(sel);
-const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
 
 function toast(msg){
-  const el = $("#toast");
-  if(!el) return;
-  el.textContent = msg;
-  el.style.opacity = "1";
+  const t = $("#toast");
+  if(!t) return;
+  t.textContent = msg;
+  t.style.opacity = "1";
   clearTimeout(toast._t);
-  toast._t = setTimeout(() => (el.style.opacity = "0"), 1600);
+  toast._t = setTimeout(() => t.style.opacity = "0", 1600);
 }
 
-function setLinks(){
-  $("#lnkLinkedIn").href = PROFILE.links.linkedin;
-  $("#lnkGitHub").href = PROFILE.links.github;
-  $("#lnkTableau").href = PROFILE.links.tableau;
-  $("#lnkPowerBI").href = PROFILE.links.powerbi;
-
-  $("#cLinkedIn").href = PROFILE.links.linkedin;
-  $("#cGitHub").href = PROFILE.links.github;
-  $("#cMedium").href = PROFILE.links.medium;
-
-  const mailHref = `mailto:${PROFILE.email}?subject=Opportunity%20—%20${encodeURIComponent(PROFILE.name)}`;
-  $("#mailBtn").href = mailHref;
+function esc(s){
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
 }
 
-/* ---------- Theme ---------- */
+/* Theme */
 function loadTheme(){
   const t = localStorage.getItem("theme") || "dark";
   if(t === "light") document.documentElement.setAttribute("data-theme","light");
@@ -192,67 +173,184 @@ function toggleTheme(){
   $("#themeIcon").textContent = (next === "light") ? "☀" : "☾";
 }
 
-/* ---------- Mobile menu ---------- */
+/* Mobile */
 function toggleMobile(open){
   const menu = $("#mobileMenu");
   const ham = $("#hamburger");
   const isOpen = menu.classList.contains("show");
   const next = (open !== undefined) ? open : !isOpen;
-
   menu.classList.toggle("show", next);
   menu.setAttribute("aria-hidden", String(!next));
   ham.setAttribute("aria-expanded", String(next));
 }
 
-/* ---------- Cursor glow ---------- */
-function initCursorGlow(){
-  const glow = $("#cursorGlow");
-  if(!glow) return;
-  window.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-  }, { passive: true });
+/* Links */
+function setLinks(){
+  $("#lnkLinkedIn").href = PROFILE.links.linkedin;
+  $("#lnkGitHub").href = PROFILE.links.github;
+  $("#lnkTableau").href = PROFILE.links.tableau;
+
+  $("#cLinkedIn").href = PROFILE.links.linkedin;
+  $("#cGitHub").href = PROFILE.links.github;
+  $("#cMedium").href = PROFILE.links.medium;
+
+  $("#resumeBtn").href = PROFILE.resume;
+
+  const emailHref = `mailto:${PROFILE.email}?subject=${encodeURIComponent("Opportunity — " + PROFILE.name)}`;
+  $("#lnkEmail").href = emailHref;
+  $("#emailBtn").href = emailHref;
 }
 
-/* ---------- Terminal ---------- */
-const TERM_LINES = {
+/* Copy */
+async function copyEmail(){
+  try{
+    await navigator.clipboard.writeText(PROFILE.email);
+    toast("Email copied.");
+  }catch{
+    toast("Copy failed.");
+  }
+}
+
+/* Hero metric cycle */
+function initSignal(){
+  const el = $("#signalMetric");
+  if(!el) return;
+  const vals = ["10M+ rows", "1M+/month", "30–45% faster", "clean KPIs"];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % vals.length;
+    el.textContent = vals[i];
+  }, 1800);
+}
+
+/* Console */
+const MODES = {
   pipelines: [
-    "> pipelines: online",
-    "> ingestion: stable",
-    "> transforms: deterministic",
-    "> quality gates: enforced",
-    "> output: analytics-ready"
-  ],
-  dashboards: [
-    "> dashboards: clean",
-    "> model: star schema",
-    "> measures: reusable",
-    "> filters: fast",
-    "> story: decision-first"
+    "pipelines: online",
+    "ingestion: stable",
+    "transforms: deterministic",
+    "quality gates: enforced",
+    "output: analytics-ready"
   ],
   metrics: [
-    "> KPI definitions: versioned",
-    "> grain: consistent",
-    "> thresholds: explicit",
-    "> owners: assigned",
-    "> actions: measurable"
+    "kpis: defined",
+    "grain: consistent",
+    "thresholds: explicit",
+    "owners: assigned",
+    "action: measurable"
   ],
-  governance: [
-    "> lineage: tracked",
-    "> access: least-privilege",
-    "> docs: crisp",
-    "> audits: painless",
-    "> humans: happy"
+  dashboards: [
+    "model: star schema",
+    "measures: reusable",
+    "refresh: predictable",
+    "views: fast",
+    "story: decision-first"
+  ],
+  streaming: [
+    "topics: durable",
+    "connect: reliable",
+    "lag: monitored",
+    "errors: handled",
+    "alerts: meaningful"
   ]
 };
 
-function renderTerminal(lines){
-  const box = $("#terminal");
-  box.innerHTML = lines.map(l => `<div class="line"><span class="prompt">></span> ${escapeHtml(l.replace(/^>\s?/, ""))}</div>`).join("");
+function renderConsole(mode){
+  const box = $("#consoleBody");
+  const lines = MODES[mode] || MODES.pipelines;
+  box.innerHTML = lines.map(x => `<div class="line"><span class="p">></span> ${esc(x)}</div>`).join("");
 }
-function escapeHtml(s){
-  return s.replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function initConsole(){
+  const segs = $$(".seg");
+  segs.forEach(btn => btn.addEventListener("click", () => {
+    segs.forEach(x => x.classList.remove("active"));
+    btn.classList.add("active");
+    renderConsole(btn.dataset.mode);
+  }));
+  renderConsole("pipelines");
 }
-function initTerminal(){
-  const chips = $$(".chip");
-  chips.forEach(btn => btn.addEventListener("click", () => {
+
+/* About */
+function renderAbout(){
+  const pills = $("#aboutPills");
+  pills.innerHTML = ABOUT_PILLS.map(p => `<span class="pill">${esc(p)}</span>`).join("");
+
+  const facts = $("#facts");
+  facts.innerHTML = FACTS.map(f => `
+    <div class="fact"><span>${esc(f.k)}</span><b>${esc(f.v)}</b></div>
+  `).join("");
+}
+
+/* Projects */
+let active = "All";
+let q = "";
+
+function types(){
+  return ["All", ...Array.from(new Set(PROJECTS.map(p => p.type)))];
+}
+
+function renderFilters(){
+  const el = $("#filters");
+  el.innerHTML = types().map(t => `
+    <button class="filter ${t===active ? "active":""}" data-type="${esc(t)}">${esc(t)}</button>
+  `).join("");
+
+  $$(".filter").forEach(b => b.addEventListener("click", () => {
+    active = b.dataset.type;
+    renderFilters();
+    renderProjects();
+  }));
+}
+
+function match(p){
+  const typeOk = (active === "All") || (p.type === active);
+  if(!typeOk) return false;
+  if(!q) return true;
+  const hay = [p.title,p.type,p.desc,(p.tags||[]).join(" "),(p.tech||[]).join(" "), (p.bullets||[]).join(" ")].join(" ").toLowerCase();
+  return hay.includes(q.toLowerCase());
+}
+
+function renderProjects(){
+  const grid = $("#projectGrid");
+  const list = PROJECTS.filter(match);
+
+  if(!list.length){
+    grid.innerHTML = `
+      <div class="panel" style="grid-column:1/-1; padding:16px;">
+        <div class="kicker">No match</div>
+        <div class="big">Try another keyword.</div>
+        <div class="muted small">Example: kafka, glue, power bi</div>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = list.map((p, i) => `
+    <div class="card" role="button" tabindex="0" data-idx="${i}">
+      <div class="kicker">${esc(p.type)}</div>
+      <div class="card-title">${esc(p.title)}</div>
+      <p class="card-desc">${esc(p.desc)}</p>
+      <div class="pillrow">
+        ${(p.tags||[]).slice(0,5).map(t => `<span class="badge">${esc(t)}</span>`).join("")}
+      </div>
+    </div>
+  `).join("");
+
+  $$(".card").forEach(c => {
+    const open = () => openModal(list[Number(c.dataset.idx)]);
+    c.addEventListener("click", open);
+    c.addEventListener("keydown", (e) => {
+      if(e.key === "Enter" || e.key === " ") open();
+    });
+  });
+}
+
+/* Skills */
+function renderSkills(){
+  const grid = $("#skillsGrid");
+  grid.innerHTML = SKILLS.map(s => `
+    <div class="panel skillbox">
+      <div class="skill-head">
+        <div class="big">${esc(s.group)}</div>
+        <div class="muted small">active use</div>
