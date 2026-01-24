@@ -1,174 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rachana | Portfolio</title>
-  <meta name="description" content="Rachana — Business Analyst / Data Analyst portfolio." />
+  <meta name="description" content="Rachana — Business Analyst / Data Analyst / Data Engineer portfolio." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="header">
+  <!-- NAV -->
+  <header class="navWrap">
     <div class="nav">
       <a class="brand" href="#top">Rachana</a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
+      <button class="navBtn" id="navBtn" aria-label="Open menu">☰</button>
 
-      <nav class="links" id="links">
+      <nav class="navLinks" id="navLinks" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact" class="pill">Contact</a>
       </nav>
     </div>
 
-    <div class="mobile" id="mobile">
+    <div class="navMobile" id="navMobile" aria-label="Mobile menu">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact" class="pill">Contact</a>
     </div>
   </header>
 
   <main id="top" class="container">
+    <!-- HERO -->
     <section class="hero">
       <div class="heroLeft">
-        <p class="eyebrow">Business Analyst • Data Analyst • Data Engineer</p>
-        <h1 class="h1">Helping businesses understand the “why” behind the numbers.</h1>
-        <p class="sub">
-          I build KPI dashboards, decision-ready reporting, and clean analysis using SQL, Power BI,
-          Python, and AWS.
+        <p class="kicker">Hey there,</p>
+        <h1 class="heroTitle">
+          I am <span class="accent">RACHANA</span>.<br />
+          I turn insights into decisions.
+        </h1>
+
+        <div class="heroBtns">
+          <!-- Replace with your actual links -->
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Get Resume</a>
+        </div>
+
+        <p class="heroSub">
+          Business Analyst / Data Analyst / Data Engineer — SQL • Power BI • Python • AWS
         </p>
-
-        <div class="actions">
-          <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn ghost" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
-        </div>
-
-        <div class="metaRow">
-          <!-- Replace these -->
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:yourname@email.com">Email</a>
-        </div>
       </div>
 
-      <aside class="profileCard reveal">
-        <div class="avatar" aria-hidden="true">R</div>
-        <div class="profileTop">
-          <div>
-            <div class="name">Rachana</div>
-            <div class="role">Analytics • BI • Data</div>
+      <div class="heroRight">
+        <div class="codeCard">
+          <div class="codeTop">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <span class="codeTitle">portfolio.js</span>
           </div>
-          <span class="chip">Open to work</span>
+
+          <pre class="codeBlock"><code id="codeText"></code></pre>
         </div>
-
-        <div class="stats">
-          <div class="stat">
-            <div class="k">10M+</div>
-            <div class="v">records handled</div>
-          </div>
-          <div class="stat">
-            <div class="k">8–12</div>
-            <div class="v">dashboards shipped</div>
-          </div>
-          <div class="stat">
-            <div class="k">30–45%</div>
-            <div class="v">effort reduced</div>
-          </div>
-          <div class="stat">
-            <div class="k">AWS</div>
-            <div class="v">S3 • Glue • Lambda</div>
-          </div>
-        </div>
-
-        <p class="small">
-          Tip: replace stats with your exact numbers for instant credibility.
-        </p>
-      </aside>
-    </section>
-
-    <section id="about" class="section reveal">
-      <h2>About</h2>
-      <p>
-        Master’s in Data Science (UMBC, May 2024). I translate business questions into metrics and dashboards,
-        support leadership decisions with SQL analysis, and automate reporting with Python.
-      </p>
-    </section>
-
-    <section id="projects" class="section reveal">
-      <div class="sectionTop">
-        <h2>Projects</h2>
-        <div class="smallMuted">Selected work (add your real repo links)</div>
-      </div>
-
-      <div class="grid" id="projectsGrid"></div>
-    </section>
-
-    <section id="skills" class="section reveal">
-      <div class="sectionTop">
-        <h2>Skills</h2>
-        <input class="input" id="skillSearch" placeholder="Search (SQL, AWS, Power BI)..." />
-      </div>
-      <div class="chips" id="skillsWrap"></div>
-    </section>
-
-    <section id="experience" class="section reveal">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <article class="card">
-          <div class="cardTop">
-            <div class="titleRow">
-              <h3>Business Analyst — NB Alpha Omega</h3>
-              <span class="smallMuted">Sep 2024 – Present</span>
-            </div>
-          </div>
-          <ul>
-            <li>Built KPI dashboards and reporting datasets used in weekly/monthly reviews.</li>
-            <li>Wrote optimized SQL for ad-hoc analysis on large tables.</li>
-            <li>Automated recurring reporting checks using Python to reduce manual effort.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="cardTop">
-            <div class="titleRow">
-              <h3>Project Engineer — Wipro</h3>
-              <span class="smallMuted">May 2021 – Jun 2022</span>
-            </div>
-          </div>
-          <ul>
-            <li>Supported analytics and reporting workflows using SQL and BI tools.</li>
-            <li>Partnered with stakeholders to define KPIs and deliver dashboard updates.</li>
-          </ul>
-        </article>
       </div>
     </section>
 
-    <section id="contact" class="section reveal">
-      <h2>Contact</h2>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="sectionTitle">ABOUT ME</h2>
 
-      <div class="contact">
-        <div class="contactLeft">
-          <div class="smallMuted">Email</div>
-          <div class="contactBig">yourname@email.com</div>
-          <div class="smallMuted">Best way to reach me: email or LinkedIn.</div>
+      <div class="split">
+        <div class="card">
+          <h3 class="cardTitle">Who am I?</h3>
+          <p class="muted">
+            I’m Rachana — a Master’s in Data Science graduate (UMBC, May 2024). I work with stakeholders to define
+            KPIs, build decision-ready dashboards, and deliver analysis that leaders can act on.
+          </p>
+          <p class="muted">
+            My sweet spot is combining <b>clean metrics</b> + <b>clear storytelling</b> with strong hands-on skills in
+            SQL, Power BI, Python, and AWS.
+          </p>
         </div>
 
-        <div class="contactRight">
-          <a class="btn primary" href="mailto:yourname@email.com">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div class="card">
+          <h3 class="cardTitle">Quick facts</h3>
+          <div class="facts">
+            <div class="fact"><span class="factNum">10M+</span><span class="factLbl">records handled</span></div>
+            <div class="fact"><span class="factNum">8–12</span><span class="factLbl">dashboards built</span></div>
+            <div class="fact"><span class="factNum">30–45%</span><span class="factLbl">effort reduced</span></div>
+            <div class="fact"><span class="factNum">AWS</span><span class="factLbl">S3 • Glue • Lambda</span></div>
+          </div>
+
+          <div class="miniLinks">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:yourname@email.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="sectionTitle">EXPERIENCE</h2>
+
+      <div class="stack" id="expWrap">
+        <!-- JS renders these -->
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="sectionRow">
+        <h2 class="sectionTitle">PROJECTS</h2>
+        <div class="filters" id="filters"></div>
+      </div>
+
+      <div class="grid" id="projectGrid"></div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <h2 class="sectionTitle">TESTIMONIALS</h2>
+
+      <div class="grid2" id="testWrap">
+        <!-- JS renders these -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="sectionTitle">CONTACT</h2>
+
+      <div class="contactWrap">
+        <div class="card">
+          <h3 class="cardTitle">Contact me</h3>
+          <p class="muted">If you have any questions, feel free to reach out.</p>
+
+          <form class="form" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your@email.com" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Send Message</button>
+            <p class="tiny muted" id="formNote"></p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 class="cardTitle">Details</h3>
+          <div class="detail">
+            <div class="muted">Email</div>
+            <div class="big">yourname@email.com</div>
+          </div>
+          <div class="detail">
+            <div class="muted">Location</div>
+            <div class="big">USA (Open to relocation)</div>
+          </div>
+
+          <div class="miniLinks">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="smallMuted">© <span id="year"></span> Rachana</div>
+      <div class="muted">© <span id="year"></span> Rachana</div>
     </footer>
   </main>
 
