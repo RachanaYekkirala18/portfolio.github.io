@@ -3,369 +3,665 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Venkata Rachana Yekkirala — Business Analyst / Data Analyst portfolio" />
-  <title>Rachana | Business Analyst • Data Analytics • BI</title>
+  <meta name="description" content="Venkata Rachana Yekkirala | Data & Business Analyst Portfolio" />
+  <title>Rachana | Portfolio</title>
 
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <!-- Ambient background -->
-  <div class="bg" aria-hidden="true">
-    <div class="aurora"></div>
-    <div class="orb o1"></div>
-    <div class="orb o2"></div>
-    <div class="orb o3"></div>
-    <div class="grid"></div>
-    <div class="noise"></div>
-    <div class="cursorGlow" id="cursorGlow"></div>
-  </div>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Topbar -->
-  <header class="topbar" id="top">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="mark"></span>
-        <span class="name">Rachana</span>
-        <span class="role">Business Analyst • Data Analytics • BI</span>
+  <!-- Background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Humanoid orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-dot"></span>
+        <span>Rachana</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a class="navlink" href="#work">Work</a>
-        <a class="navlink" href="#case-studies">Case Studies</a>
-        <a class="navlink" href="#skills">Skills</a>
-        <a class="navlink" href="#experience">Experience</a>
-        <a class="navlink" href="#credibility">Credibility</a>
-        <a class="navlink" href="#contact">Contact</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certs" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
       </nav>
 
-      <div class="actions">
-        <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-          <span id="themeIcon">☾</span>
-        </button>
-        <a class="btn primary" id="resumeBtn" href="YVR.pdf" target="_blank" rel="noopener">Resume</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
     </div>
 
     <!-- Mobile menu -->
-    <div class="mobile" id="mobileMenu" aria-hidden="true">
-      <div class="wrap mobile-inner">
-        <a class="mobilelink" href="#work">Work</a>
-        <a class="mobilelink" href="#case-studies">Case Studies</a>
-        <a class="mobilelink" href="#skills">Skills</a>
-        <a class="mobilelink" href="#experience">Experience</a>
-        <a class="mobilelink" href="#credibility">Credibility</a>
-        <a class="mobilelink" href="#contact">Contact</a>
-        <a class="btn primary full" href="YVR.pdf" target="_blank" rel="noopener">Resume</a>
-      </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" class="m-link">About</a>
+      <a href="#skills" class="m-link">Skills</a>
+      <a href="#experience" class="m-link">Experience</a>
+      <a href="#projects" class="m-link">Projects</a>
+      <a href="#education" class="m-link">Education</a>
+      <a href="#certs" class="m-link">Certifications</a>
+      <a href="#contact" class="m-link">Contact</a>
     </div>
   </header>
 
+  <!-- Hero -->
   <main>
-    <!-- HERO -->
-    <section class="wrap hero">
-      <div class="hero-left reveal">
-        <div class="pill">
-          <span class="dot"></span>
-          <span id="availability">Open to Business Analyst / Data Analyst roles</span>
-        </div>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
+          <p class="pill">
+            <i data-lucide="sparkles"></i>
+            Data & Business Analyst • SQL • GCP BigQuery • Dashboards
+          </p>
 
-        <h1 class="h1">
-          I turn complex data into clear decisions.
-          <span class="h1-soft">KPI systems • executive dashboards • analytics you can trust.</span>
-        </h1>
+          <h1 class="hero-title">
+            VENKATA RACHANA<br />
+            <span class="muted">YEKKIRALA</span>
+          </h1>
 
-        <p class="lead">
-          I’m <b>Venkata Rachana Yekkirala</b> — with <b>2+ years</b> across data analytics, business analysis,
-          and cloud-based platforms. I work hands-on with <b>AWS, SQL, Power BI, Tableau, Snowflake</b> to ship
-          reliable reporting and stakeholder-ready insights.
-        </p>
+          <p class="hero-sub">
+            I turn clinical + operational data into decisions using metrics, dashboards,
+            and statistical analysis — so teams deliver safer, faster, and more effective care.
+          </p>
 
-        <div class="cta">
-          <a class="btn primary" href="#case-studies">View case studies</a>
-          <button class="btn ghost" id="copyEmailBtn">Copy email</button>
-        </div>
-
-        <div class="proof">
-          <div class="proof-card">
-            <div class="kicker">Impact</div>
-            <div class="big">45% faster ETL</div>
-            <div class="muted">Lakehouse pipeline optimization</div>
-          </div>
-          <div class="proof-card">
-            <div class="kicker">Quality</div>
-            <div class="big">30% more reliable</div>
-            <div class="muted">Validation + QA checks</div>
-          </div>
-          <div class="proof-card">
-            <div class="kicker">Modeling</div>
-            <div class="big">KPI systems</div>
-            <div class="muted">Definitions, validation, reporting logic</div>
-          </div>
-        </div>
-
-        <div class="linkrow">
-          <a class="chip" id="lnkLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="chip" id="lnkGitHub" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" id="lnkMedium" href="#" target="_blank" rel="noopener">Medium</a>
-        </div>
-      </div>
-
-      <!-- Humanoid “console” -->
-      <div class="hero-right reveal">
-        <div class="glass humanoid">
-          <div class="humanoid-top">
-            <div class="eye"></div>
-            <div class="eye"></div>
-            <div class="hum-title">
-              <div class="kicker">Humanoid console</div>
-              <div class="big">Decision Layer</div>
-            </div>
-            <div class="hum-glow"></div>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">
+              View Projects <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a class="btn" href="#contact">
+              Contact <i data-lucide="mail"></i>
+            </a>
           </div>
 
-          <div class="hum-body">
-            <div class="scan"></div>
+          <div class="hero-links">
+            <a class="icon-link" href="mailto:rachana18apr@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a class="icon-link" href="#" aria-label="LinkedIn" id="linkedinLink">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a class="icon-link" href="#" aria-label="GitHub" id="githubLink">
+              <i data-lucide="github"></i>
+            </a>
+            <a class="icon-link" href="tel:+16673698226" aria-label="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+          </div>
 
-            <div class="hum-row">
-              <span class="tag">DEFINE</span>
-              <span class="muted">KPIs • metric logic • reporting rules</span>
+          <div class="meta-row">
+            <div class="meta">
+              <i data-lucide="map-pin"></i>
+              <span>Maryland, USA</span>
             </div>
-            <div class="hum-row">
-              <span class="tag">VALIDATE</span>
-              <span class="muted">Reconciliation • QA • audit-ready checks</span>
-            </div>
-            <div class="hum-row">
-              <span class="tag">ANALYZE</span>
-              <span class="muted">SQL insights • variance • root cause</span>
-            </div>
-            <div class="hum-row">
-              <span class="tag">VISUALIZE</span>
-              <span class="muted">Power BI/Tableau dashboards • self-service</span>
-            </div>
-
-            <div class="hum-foot">
-              <span class="mini">Clean</span>
-              <span class="mini">Explainable</span>
-              <span class="mini">Decision-ready</span>
+            <div class="meta">
+              <i data-lucide="phone"></i>
+              <span>(667) 369-8226</span>
             </div>
           </div>
         </div>
 
-        <div class="glass mini-note reveal">
-          <div class="kicker">How I work</div>
-          <div class="muted">
-            I align stakeholders on metric definitions first, then build dashboards and datasets that enforce those rules consistently.
+        <div class="hero-right reveal">
+          <div class="code-card">
+            <div class="code-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-title">profile.js</span>
+            </div>
+<pre class="code-block"><code>
+const analyst = {
+  name: "Venkata Rachana Yekkirala",
+  focus: [
+    "program performance",
+    "clinical + operational analytics",
+    "EHR + claims alignment",
+    "dashboards + KPI metrics"
+  ],
+  tools: ["SQL", "GCP BigQuery", "Python", "R (exposure)"],
+  strengths: [
+    "requirements → technical translation",
+    "data validation + quality checks",
+    "stakeholder reporting"
+  ],
+  hireable: () => true
+};
+</code></pre>
+
+            <div class="code-tags">
+              <span class="tag">SQL</span>
+              <span class="tag">GCP</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">Dashboards</span>
+              <span class="tag">EDA</span>
+              <span class="tag">Stats</span>
+            </div>
+          </div>
+
+          <div class="mini-cards">
+            <div class="mini-card">
+              <p class="mini-kpi">500K+</p>
+              <p class="mini-label">records / reporting cycle</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-kpi">10–15</p>
+              <p class="mini-label">dashboards & reports</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-kpi">45%</p>
+              <p class="mini-label">ETL time reduction (project)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-divider">
+        <div class="divider-line"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About</h2>
+          <p class="section-sub">
+            Data & Business Analyst focused on scalable reporting systems, clean datasets, and stakeholder-ready insights.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3 class="card-title">Summary</h3>
+            <p class="card-text">
+              Data & Business Analyst with experience evaluating program performance through metrics, dashboards,
+              and statistical analysis to assess effectiveness and impact. Skilled in using SQL and cloud-based data
+              platforms to support clinical and operational process improvements, translate business requirements
+              for technical teams, and deliver actionable insights to internal and external stakeholders.
+            </p>
+
+            <div class="chip-row">
+              <span class="chip">Program Performance</span>
+              <span class="chip">KPI Metrics</span>
+              <span class="chip">Clinical Analytics</span>
+              <span class="chip">Data Quality</span>
+              <span class="chip">Stakeholder Reporting</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card-title">What I’m strong at</h3>
+            <ul class="list">
+              <li><i data-lucide="check-circle-2"></i> Building operational + compliance dashboards that teams actually use</li>
+              <li><i data-lucide="check-circle-2"></i> Multi-source integration, validation, and reporting-ready datasets</li>
+              <li><i data-lucide="check-circle-2"></i> Translating business requirements into technical work for engineers</li>
+              <li><i data-lucide="check-circle-2"></i> Statistical analysis: regression, hypothesis testing, clustering</li>
+              <li><i data-lucide="check-circle-2"></i> Fast, clean ad-hoc analysis for internal + customer stakeholders</li>
+            </ul>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">
+                Let’s talk <i data-lucide="arrow-up-right"></i>
+              </a>
+              <a class="btn small ghost" href="#projects">
+                See work <i data-lucide="layers"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="wrap section" id="work">
-      <div class="section-head reveal">
-        <h2>What I deliver</h2>
-        <p class="muted">Neha Nooka-style: outcomes first, tools second.</p>
-      </div>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <p class="section-sub">Built for healthcare + operational reporting: accurate, repeatable, scalable.</p>
+        </div>
 
-      <div class="deliver-grid">
-        <div class="glass deliver reveal">
-          <div class="kicker">1) KPI Systems</div>
-          <div class="big">Metrics that don’t drift</div>
-          <p class="muted">KPI definition, validation, and documentation so teams measure the same truth.</p>
-          <div class="bullets">
-            <div class="bullet">KPI definition + validation rules</div>
-            <div class="bullet">BRD/RTM/UAT coordination</div>
-            <div class="bullet">Executive-ready reporting logic</div>
+        <div class="cards-3">
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="bar-chart-3"></i></div>
+            <h3 class="card-title">Data Analysis & Methods</h3>
+            <ul class="bullets">
+              <li>Program Performance Analysis</li>
+              <li>Metric & KPI Analysis</li>
+              <li>Trend & Pattern Analysis</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+              <li>Regression, Hypothesis Testing, Clustering</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="glass deliver reveal">
-          <div class="kicker">2) Analytics</div>
-          <div class="big">Insights you can act on</div>
-          <p class="muted">Ad-hoc SQL, variance analysis, root cause analysis, and experimentation support.</p>
-          <div class="bullets">
-            <div class="bullet">SQL (CTEs, windows, optimization)</div>
-            <div class="bullet">A/B testing and success metrics</div>
-            <div class="bullet">Trend and anomaly detection</div>
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="database"></i></div>
+            <h3 class="card-title">Data & Analytics Tools</h3>
+            <ul class="bullets">
+              <li>SQL</li>
+              <li>GCP (BigQuery / Cloud Data Environments)</li>
+              <li>Python</li>
+              <li>R (Exposure)</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="glass deliver reveal">
-          <div class="kicker">3) BI</div>
-          <div class="big">Dashboards people trust</div>
-          <p class="muted">Power BI/Tableau dashboards designed for decision workflows and self-service.</p>
-          <div class="bullets">
-            <div class="bullet">Power BI (DAX, modeling, KPIs)</div>
-            <div class="bullet">Tableau dashboards + calculated fields</div>
-            <div class="bullet">Clean layout + narrative clarity</div>
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="presentation"></i></div>
+            <h3 class="card-title">Reporting & Visualization</h3>
+            <ul class="bullets">
+              <li>Dashboards</li>
+              <li>Analytical Reports</li>
+              <li>Data Storytelling</li>
+              <li>Stakeholder-Facing Reporting</li>
+              <li>Continuous Improvement Reporting</li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CASE STUDIES -->
-    <section class="wrap section" id="case-studies">
-      <div class="section-head reveal">
-        <h2>Case studies</h2>
-        <p class="muted">Click a card: problem → approach → impact.</p>
-      </div>
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="activity"></i></div>
+            <h3 class="card-title">Clinical & Operational Analytics</h3>
+            <ul class="bullets">
+              <li>Clinical Services Reporting</li>
+              <li>Patient Outcomes Analysis</li>
+              <li>Quality of Care Metrics</li>
+              <li>Operational Efficiency Analysis</li>
+              <li>Process Improvement Support</li>
+            </ul>
+          </div>
 
-      <div class="controls glass reveal">
-        <div class="filters" id="filters"></div>
-        <div class="search">
-          <input id="searchInput" type="text" placeholder="Search: lakehouse, fraud, genai, power bi..." autocomplete="off" />
-          <button class="iconbtn" id="clearSearch" aria-label="Clear search">✕</button>
-        </div>
-      </div>
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="users"></i></div>
+            <h3 class="card-title">Requirements & Stakeholder Support</h3>
+            <ul class="bullets">
+              <li>Business Requirements Gathering</li>
+              <li>Technical Translation</li>
+              <li>Ad-hoc Analysis</li>
+              <li>Internal & External Stakeholder Support</li>
+            </ul>
+          </div>
 
-      <div class="cards" id="projectGrid"></div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="wrap section" id="skills">
-      <div class="section-head reveal">
-        <h2>Skills</h2>
-        <p class="muted">Grouped, readable, and ATS-friendly.</p>
-      </div>
-
-      <div class="skills-grid" id="skillsGrid"></div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="wrap section" id="experience">
-      <div class="section-head reveal">
-        <h2>Experience</h2>
-        <p class="muted">Business analysis + analytics + cloud platforms.</p>
-      </div>
-
-      <div class="timeline" id="timeline"></div>
-    </section>
-
-    <!-- CREDIBILITY -->
-    <section class="wrap section" id="credibility">
-      <div class="section-head reveal">
-        <h2>Credibility</h2>
-        <p class="muted">Education + certifications.</p>
-      </div>
-
-      <div class="cred-grid">
-        <div class="glass pad reveal">
-          <div class="kicker">Education</div>
-          <div class="big">UMBC • Data Science</div>
-          <div class="muted">Master of Professional Studies in Data Science • Aug 2022 – May 2024</div>
-          <div class="muted" style="margin-top:8px;">MLRIT • Electronics & Communication Engineering • Aug 2018 – Aug 2020</div>
-        </div>
-
-        <div class="glass pad reveal">
-          <div class="kicker">Certifications</div>
-          <div class="pillbox" id="certs"></div>
-        </div>
-
-        <div class="glass pad reveal">
-          <div class="kicker">Core strengths</div>
-          <div class="muted">
-            Stakeholder alignment, audit-ready reporting logic, strong SQL analysis, dashboard design, and quality-first data validation.
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="card-title">Data Management & Quality</h3>
+            <ul class="bullets">
+              <li>Multi-Source Data Integration</li>
+              <li>Data Validation</li>
+              <li>Data Quality Checks</li>
+              <li>Reporting-Ready Datasets</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="wrap section" id="contact">
-      <div class="section-head reveal">
-        <h2>Contact</h2>
-        <p class="muted">Fastest response via email.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="glass pad reveal">
-          <div class="big">Let’s talk.</div>
-          <p class="muted">Hiring for Business Analyst / Data Analyst roles? I can share a tailored resume and project walkthrough.</p>
-
-          <div class="contact-actions">
-            <a class="btn primary" id="emailBtn" href="#">Email me</a>
-            <button class="btn ghost" id="copyEmailBtn2">Copy email</button>
-          </div>
-
-          <div class="toast" id="toast" aria-live="polite"></div>
-
-          <div class="contact-links">
-            <a class="chip" id="lnkLinkedIn2" href="#" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="chip" id="lnkGitHub2" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="chip" id="lnkMedium2" href="#" target="_blank" rel="noopener">Medium</a>
-          </div>
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Experience</h2>
+          <p class="section-sub">Impact-focused work across healthcare, operations, and analytics delivery.</p>
         </div>
 
-        <div class="glass pad reveal">
-          <div class="kicker">Quick note generator</div>
-          <div class="big">Message draft</div>
-          <p class="muted small">Type a role/company and focus. It generates a clean email draft you can copy.</p>
+        <div class="timeline">
+          <div class="t-item card reveal">
+            <div class="t-top">
+              <div>
+                <h3 class="card-title">Business Analyst</h3>
+                <p class="muted">NB Alpha Omega • Sep 2024 – Present</p>
+              </div>
+              <span class="badge">Current</span>
+            </div>
+            <ul class="bullets">
+              <li>Analyzed program data and performance metrics across 5–7 initiatives, reviewing 500K+ records per reporting cycle.</li>
+              <li>Designed and built 10–15 reports and dashboards using SQL and GCP-based datasets for strategic decisions.</li>
+              <li>Applied regression, hypothesis testing, and clustering on 300K+ rows to evaluate performance and support predictive analysis.</li>
+              <li>Supported process improvements across 3–4 clinical and operational workflows, reducing inefficiencies and delays.</li>
+              <li>Partnered with 10+ stakeholders to report on clinical services, patient outcomes, quality of care, and operational efficiency.</li>
+            </ul>
+          </div>
 
-          <label class="label">Role / Company</label>
-          <input class="input" id="roleInput" placeholder="e.g., Business Analyst at UnitedHealth" />
+          <div class="t-item card reveal">
+            <div class="t-top">
+              <div>
+                <h3 class="card-title">Project Engineer</h3>
+                <p class="muted">Wipro Limited • Hyderabad, India • May 2021 – Jun 2022</p>
+              </div>
+              <span class="badge ghost">1 year</span>
+            </div>
+            <ul class="bullets">
+              <li>Gathered and documented 20–30 business requirements and translated them into inputs for development teams.</li>
+              <li>Provided ad-hoc analysis (5–8 requests/month) to support internal and external stakeholders.</li>
+              <li>Performed EDA on multi-source datasets (500K+ records) to assess quality, patterns, and outliers.</li>
+              <li>Supported development and maintenance of 8–10 analytical tools and datasets for accuracy and usability.</li>
+              <li>Collaborated with cross-functional teams to align analysis with program goals.</li>
+            </ul>
+          </div>
 
-          <label class="label">What should I highlight?</label>
-          <textarea class="input area" id="focusInput" placeholder="e.g., KPI validation, Power BI dashboards, SQL analysis, AWS data platforms"></textarea>
-
-          <button class="btn primary full" id="draftBtn">Generate draft</button>
-          <div class="draftbox" id="draftBox" aria-live="polite"></div>
+          <div class="t-item card reveal">
+            <div class="t-top">
+              <div>
+                <h3 class="card-title">Technical & Academic Mentor – Data Analytics</h3>
+                <p class="muted">MLRIT • Aug 2018 – Jul 2020</p>
+              </div>
+              <span class="badge ghost">Mentorship</span>
+            </div>
+            <ul class="bullets">
+              <li>Mentored teams on SQL, Python, and data modeling, turning raw data into structured insights.</li>
+              <li>Guided dashboards in Power BI and Excel with strong focus on accuracy and clarity.</li>
+              <li>Critiqued analytical outputs for logic, correctness, and professional presentation standards.</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <footer class="footer">
-        <span class="muted small">© <span id="year"></span> Venkata Rachana Yekkirala • Built for GitHub Pages</span>
-        <a class="muted small" href="#top">Back to top ↑</a>
-      </footer>
     </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Projects</h2>
+          <p class="section-sub">A mix of data engineering + analytics projects with measurable outcomes.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card project reveal">
+            <div class="p-top">
+              <h3 class="card-title">Scalable AWS Data Lakehouse Pipeline</h3>
+              <span class="badge">Data Engineering</span>
+            </div>
+            <p class="card-text">
+              Built an end-to-end lakehouse using medallion architecture (Bronze–Silver–Gold) with PySpark ETL and analytics-ready datasets.
+            </p>
+            <div class="chip-row">
+              <span class="chip">S3</span><span class="chip">Glue (PySpark)</span><span class="chip">Lambda</span>
+              <span class="chip">Step Functions</span><span class="chip">Athena</span><span class="chip">Redshift</span><span class="chip">QuickSight</span>
+            </div>
+            <div class="metrics">
+              <span class="metric">↓ 45% ETL time</span>
+              <span class="metric">↑ 30% reliability</span>
+            </div>
+            <div class="p-links">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
+                GitHub <i data-lucide="github"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="p-top">
+              <h3 class="card-title">Power BI – Sales Dashboard</h3>
+              <span class="badge">BI</span>
+            </div>
+            <p class="card-text">
+              Created interactive dashboards with automated refresh, KPI tracking, and trend analysis for sales performance reporting.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Excel</span>
+            </div>
+            <div class="metrics">
+              <span class="metric">↓ 50% manual reporting</span>
+            </div>
+            <div class="p-links">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
+                Demo <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="p-top">
+              <h3 class="card-title">Netflix Content Strategy Analysis</h3>
+              <span class="badge">Analytics</span>
+            </div>
+            <p class="card-text">
+              Analyzed 3M+ records to identify content performance and audience trends; built dashboards for strategy decisions.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Matplotlib</span>
+            </div>
+            <div class="metrics">
+              <span class="metric">↑ 17% recommendation insights</span>
+            </div>
+            <div class="p-links">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
+                GitHub <i data-lucide="github"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="p-top">
+              <h3 class="card-title">IEEE-CIS Fraud Detection</h3>
+              <span class="badge">ML</span>
+            </div>
+            <p class="card-text">
+              Feature engineering + model tuning on transaction datasets using supervised ML for risk analytics.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Python</span>
+            </div>
+            <div class="metrics">
+              <span class="metric">↑ 18% accuracy</span>
+              <span class="metric">↓ 22% false positives</span>
+            </div>
+            <div class="p-links">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
+                GitHub <i data-lucide="github"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="p-top">
+              <h3 class="card-title">Synthetic Data Generator using GenAI</h3>
+              <span class="badge">GenAI</span>
+            </div>
+            <p class="card-text">
+              Built a synthetic data generation pipeline using Generative AI and implemented data quality validation checks.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">OpenAI API</span><span class="chip">Pandas</span><span class="chip">Data Quality</span>
+            </div>
+            <div class="p-links">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
+                GitHub <i data-lucide="github"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Education</h2>
+          <p class="section-sub">Formal training + strong analytics foundation.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <div class="edu-row">
+              <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+              <div>
+                <h3 class="card-title">Master of Professional Studies in Data Science</h3>
+                <p class="muted">University of Maryland Baltimore County • Aug 2022 – May 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="edu-row">
+              <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+              <div>
+                <h3 class="card-title">Bachelor in Electronics and Communication Engineering</h3>
+                <p class="muted">Marri Laxman Reddy Institute of Technology • Aug 2018 – Aug 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Certifications</h2>
+          <p class="section-sub">Proof of depth in cloud, analytics, and compliance.</p>
+        </div>
+
+        <div class="cards-3">
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="card-title">AWS Solutions Architect – Professional</h3>
+            <p class="muted">AWS</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="layers"></i></div>
+            <h3 class="card-title">AWS Certified Data Engineer – Associate (2025)</h3>
+            <p class="muted">AWS</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="layers"></i></div>
+            <h3 class="card-title">AWS Certified Solutions Architect – Associate</h3>
+            <p class="muted">AWS</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="bar-chart-3"></i></div>
+            <h3 class="card-title">Tableau Desktop Specialist</h3>
+            <p class="muted">Tableau</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="card-title">HIPAA Certified – American Health Training</h3>
+            <p class="muted">Healthcare compliance</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="file-text"></i></div>
+            <h3 class="card-title">Applied Statistics with Python – University of Michigan (Coursera)</h3>
+            <p class="muted">Statistics</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-icon"><i data-lucide="cloud"></i></div>
+            <h3 class="card-title">Oracle Cloud Infrastructure Foundations Associate</h3>
+            <p class="muted">Oracle</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Contact</h2>
+          <p class="section-sub">Want dashboards that drive decisions? Let’s connect.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3 class="card-title">Reach out</h3>
+
+            <div class="contact-row">
+              <i data-lucide="mail"></i>
+              <a href="mailto:rachana18apr@gmail.com">rachana18apr@gmail.com</a>
+            </div>
+
+            <div class="contact-row">
+              <i data-lucide="phone"></i>
+              <a href="tel:+16673698226">+1 (667) 369-8226</a>
+            </div>
+
+            <div class="contact-row">
+              <i data-lucide="linkedin"></i>
+              <a href="#" id="linkedin2" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+
+            <div class="contact-row">
+              <i data-lucide="github"></i>
+              <a href="#" id="github2" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small primary" href="mailto:rachana18apr@gmail.com">
+                Email me <i data-lucide="arrow-up-right"></i>
+              </a>
+              <a class="btn small ghost" href="#top">
+                Back to top <i data-lucide="arrow-up"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card-title">Quick message</h3>
+            <form class="form" onsubmit="return false;">
+              <label>
+                <span>Name</span>
+                <input type="text" placeholder="Your name" />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" placeholder="you@example.com" />
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea rows="5" placeholder="Tell me what you’re looking for..."></textarea>
+              </label>
+
+              <button class="btn primary" id="fakeSend">
+                Send <i data-lucide="send"></i>
+              </button>
+
+              <p class="muted tiny" id="formNote">
+                This form is static (GitHub Pages). If you want, I’ll add Formspree in 2 lines.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> Venkata Rachana Yekkirala • Built with HTML/CSS/JS</p>
+        <div class="footer-icons">
+          <a class="icon-link" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <!-- Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card glass">
-      <div class="modal-head">
-        <div>
-          <div class="kicker" id="mType">Case study</div>
-          <div class="modal-title" id="mTitle">Title</div>
-          <div class="muted" id="mSub">Stack • Outcome</div>
-        </div>
-        <button class="iconbtn" id="mClose" aria-label="Close">✕</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="mblock">
-          <div class="kicker">Problem</div>
-          <div class="muted" id="mProblem"></div>
-        </div>
-        <div class="mblock">
-          <div class="kicker">Approach</div>
-          <ul class="mlist" id="mApproach"></ul>
-        </div>
-        <div class="mblock">
-          <div class="kicker">Impact</div>
-          <div class="impact" id="mImpact"></div>
-        </div>
-        <div class="mblock">
-          <div class="kicker">Tech</div>
-          <div class="pillbox" id="mTech"></div>
-        </div>
-
-        <div class="modal-actions">
-          <a class="btn primary" id="mLink" href="#" target="_blank" rel="noopener">Open repo</a>
-          <button class="btn ghost" id="copyCaseBtn">Copy summary</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
