@@ -6,85 +6,81 @@
   <meta name="description" content="Venkata Rachana Yekkirala | Data & Business Analyst Portfolio" />
   <title>Rachana | Portfolio</title>
 
-  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <link rel="stylesheet" href="./style.css" />
+
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-  <!-- Cursor glow -->
-  <div class="cursor-glow" aria-hidden="true"></div>
-
-  <!-- Background grid -->
-  <div class="bg-grid" aria-hidden="true"></div>
-
-  <!-- Humanoid orbs -->
-  <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
+  <!-- Ambient background -->
+  <div class="bg" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="cursor" id="cursorGlow"></div>
+  </div>
 
   <!-- Header -->
   <header class="header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top">
-        <span class="brand-dot"></span>
+    <div class="container header-row">
+      <a class="logo" href="#top">
+        <span class="logo-dot"></span>
         <span>Rachana</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#certs" class="nav-link">Certifications</a>
-        <a href="#contact" class="nav-link nav-cta">Contact</a>
+        <a href="#about" class="navlink">About</a>
+        <a href="#skills" class="navlink">Skills</a>
+        <a href="#experience" class="navlink">Experience</a>
+        <a href="#projects" class="navlink">Projects</a>
+        <a href="#education" class="navlink">Education</a>
+        <a href="#certs" class="navlink">Certifications</a>
+        <a href="#contact" class="navlink cta">Contact</a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <button class="hamburger" id="menuBtn" aria-label="Open menu">
         <i data-lucide="menu"></i>
       </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="mobile-nav" id="mobileNav">
-      <a href="#about" class="m-link">About</a>
-      <a href="#skills" class="m-link">Skills</a>
-      <a href="#experience" class="m-link">Experience</a>
-      <a href="#projects" class="m-link">Projects</a>
-      <a href="#education" class="m-link">Education</a>
-      <a href="#certs" class="m-link">Certifications</a>
-      <a href="#contact" class="m-link">Contact</a>
+    <div class="mobile" id="mobileMenu">
+      <a href="#about" class="ml">About</a>
+      <a href="#skills" class="ml">Skills</a>
+      <a href="#experience" class="ml">Experience</a>
+      <a href="#projects" class="ml">Projects</a>
+      <a href="#education" class="ml">Education</a>
+      <a href="#certs" class="ml">Certifications</a>
+      <a href="#contact" class="ml">Contact</a>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Main -->
   <main>
-    <section class="hero section">
+    <!-- Hero -->
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-left reveal">
-          <p class="pill">
+          <div class="pill">
             <i data-lucide="sparkles"></i>
-            Data & Business Analyst • SQL • GCP BigQuery • Dashboards
-          </p>
+            <span>Data & Business Analyst • SQL • GCP BigQuery • Dashboards</span>
+          </div>
 
-          <h1 class="hero-title">
+          <h1 class="h1">
             VENKATA RACHANA<br />
-            <span class="muted">YEKKIRALA</span>
+            <span class="h1-muted">YEKKIRALA</span>
           </h1>
 
-          <p class="hero-sub">
+          <p class="lead">
             I turn clinical + operational data into decisions using metrics, dashboards,
             and statistical analysis — so teams deliver safer, faster, and more effective care.
           </p>
 
-          <div class="hero-actions">
+          <div class="actions">
             <a class="btn primary" href="#projects">
               View Projects <i data-lucide="arrow-up-right"></i>
             </a>
@@ -93,43 +89,40 @@
             </a>
           </div>
 
-          <div class="hero-links">
-            <a class="icon-link" href="mailto:rachana18apr@gmail.com" aria-label="Email">
-              <i data-lucide="mail"></i>
-            </a>
-            <a class="icon-link" href="#" aria-label="LinkedIn" id="linkedinLink">
-              <i data-lucide="linkedin"></i>
-            </a>
-            <a class="icon-link" href="#" aria-label="GitHub" id="githubLink">
-              <i data-lucide="github"></i>
-            </a>
-            <a class="icon-link" href="tel:+16673698226" aria-label="Phone">
-              <i data-lucide="phone"></i>
-            </a>
-          </div>
-
-          <div class="meta-row">
-            <div class="meta">
+          <div class="quick">
+            <div class="q">
               <i data-lucide="map-pin"></i>
               <span>Maryland, USA</span>
             </div>
-            <div class="meta">
+            <div class="q">
               <i data-lucide="phone"></i>
               <span>(667) 369-8226</span>
             </div>
+            <div class="q">
+              <i data-lucide="mail"></i>
+              <a href="mailto:rachana18apr@gmail.com">rachana18apr@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="social">
+            <a class="icon" href="mailto:rachana18apr@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            <a class="icon" id="lnk1" href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a class="icon" id="git1" href="#" target="_blank" rel="noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
           </div>
         </div>
 
         <div class="hero-right reveal">
-          <div class="code-card">
-            <div class="code-top">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-title">profile.js</span>
+          <div class="glass">
+            <div class="glass-top">
+              <div class="dots">
+                <span class="d red"></span>
+                <span class="d yellow"></span>
+                <span class="d green"></span>
+              </div>
+              <span class="file">profile.js</span>
             </div>
-<pre class="code-block"><code>
-const analyst = {
+
+<pre class="code"><code>const analyst = {
   name: "Venkata Rachana Yekkirala",
   focus: [
     "program performance",
@@ -144,62 +137,56 @@ const analyst = {
     "stakeholder reporting"
   ],
   hireable: () => true
-};
-</code></pre>
+};</code></pre>
 
-            <div class="code-tags">
-              <span class="tag">SQL</span>
-              <span class="tag">GCP</span>
-              <span class="tag">BigQuery</span>
-              <span class="tag">Dashboards</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Stats</span>
+            <div class="chips">
+              <span class="chip">SQL</span>
+              <span class="chip">GCP</span>
+              <span class="chip">BigQuery</span>
+              <span class="chip">Dashboards</span>
+              <span class="chip">EDA</span>
+              <span class="chip">Stats</span>
             </div>
           </div>
 
-          <div class="mini-cards">
-            <div class="mini-card">
-              <p class="mini-kpi">500K+</p>
-              <p class="mini-label">records / reporting cycle</p>
+          <div class="kpis">
+            <div class="kpi">
+              <div class="knum">500K+</div>
+              <div class="klabel">records / reporting cycle</div>
             </div>
-            <div class="mini-card">
-              <p class="mini-kpi">10–15</p>
-              <p class="mini-label">dashboards & reports</p>
+            <div class="kpi">
+              <div class="knum">10–15</div>
+              <div class="klabel">dashboards & reports</div>
             </div>
-            <div class="mini-card">
-              <p class="mini-kpi">45%</p>
-              <p class="mini-label">ETL time reduction (project)</p>
+            <div class="kpi">
+              <div class="knum">45%</div>
+              <div class="klabel">ETL time reduction (project)</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container hero-divider">
-        <div class="divider-line"></div>
-      </div>
+      <div class="container divider"></div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>About</h2>
-          <p class="section-sub">
-            Data & Business Analyst focused on scalable reporting systems, clean datasets, and stakeholder-ready insights.
-          </p>
+          <p>Data & Business Analyst focused on scalable reporting systems, clean datasets, and stakeholder-ready insights.</p>
         </div>
 
-        <div class="grid-2">
+        <div class="grid2">
           <div class="card reveal">
-            <h3 class="card-title">Summary</h3>
-            <p class="card-text">
+            <h3>Summary</h3>
+            <p>
               Data & Business Analyst with experience evaluating program performance through metrics, dashboards,
               and statistical analysis to assess effectiveness and impact. Skilled in using SQL and cloud-based data
               platforms to support clinical and operational process improvements, translate business requirements
               for technical teams, and deliver actionable insights to internal and external stakeholders.
             </p>
-
-            <div class="chip-row">
+            <div class="chips">
               <span class="chip">Program Performance</span>
               <span class="chip">KPI Metrics</span>
               <span class="chip">Clinical Analytics</span>
@@ -209,22 +196,17 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <h3 class="card-title">What I’m strong at</h3>
-            <ul class="list">
-              <li><i data-lucide="check-circle-2"></i> Building operational + compliance dashboards that teams actually use</li>
-              <li><i data-lucide="check-circle-2"></i> Multi-source integration, validation, and reporting-ready datasets</li>
-              <li><i data-lucide="check-circle-2"></i> Translating business requirements into technical work for engineers</li>
-              <li><i data-lucide="check-circle-2"></i> Statistical analysis: regression, hypothesis testing, clustering</li>
-              <li><i data-lucide="check-circle-2"></i> Fast, clean ad-hoc analysis for internal + customer stakeholders</li>
+            <h3>What I’m strong at</h3>
+            <ul class="check">
+              <li><i data-lucide="check-circle-2"></i> Dashboards that teams actually use</li>
+              <li><i data-lucide="check-circle-2"></i> Multi-source integration, validation, reporting-ready datasets</li>
+              <li><i data-lucide="check-circle-2"></i> Requirements → technical translation for engineering</li>
+              <li><i data-lucide="check-circle-2"></i> Regression, hypothesis testing, clustering</li>
+              <li><i data-lucide="check-circle-2"></i> Fast, clean ad-hoc reporting for stakeholders</li>
             </ul>
-
-            <div class="cta-row">
-              <a class="btn small" href="#contact">
-                Let’s talk <i data-lucide="arrow-up-right"></i>
-              </a>
-              <a class="btn small ghost" href="#projects">
-                See work <i data-lucide="layers"></i>
-              </a>
+            <div class="row">
+              <a class="btn small" href="#contact">Let’s talk <i data-lucide="arrow-up-right"></i></a>
+              <a class="btn small ghost" href="#projects">See work <i data-lucide="layers"></i></a>
             </div>
           </div>
         </div>
@@ -234,16 +216,16 @@ const analyst = {
     <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Skills</h2>
-          <p class="section-sub">Built for healthcare + operational reporting: accurate, repeatable, scalable.</p>
+          <p>Built for healthcare + operational reporting: accurate, repeatable, scalable.</p>
         </div>
 
-        <div class="cards-3">
+        <div class="grid3">
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="bar-chart-3"></i></div>
-            <h3 class="card-title">Data Analysis & Methods</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="bar-chart-3"></i></div>
+            <h3>Data Analysis & Methods</h3>
+            <ul class="bul">
               <li>Program Performance Analysis</li>
               <li>Metric & KPI Analysis</li>
               <li>Trend & Pattern Analysis</li>
@@ -253,9 +235,9 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="database"></i></div>
-            <h3 class="card-title">Data & Analytics Tools</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="database"></i></div>
+            <h3>Data & Analytics Tools</h3>
+            <ul class="bul">
               <li>SQL</li>
               <li>GCP (BigQuery / Cloud Data Environments)</li>
               <li>Python</li>
@@ -264,9 +246,9 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="presentation"></i></div>
-            <h3 class="card-title">Reporting & Visualization</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="presentation"></i></div>
+            <h3>Reporting & Visualization</h3>
+            <ul class="bul">
               <li>Dashboards</li>
               <li>Analytical Reports</li>
               <li>Data Storytelling</li>
@@ -276,9 +258,9 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="activity"></i></div>
-            <h3 class="card-title">Clinical & Operational Analytics</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="activity"></i></div>
+            <h3>Clinical & Operational Analytics</h3>
+            <ul class="bul">
               <li>Clinical Services Reporting</li>
               <li>Patient Outcomes Analysis</li>
               <li>Quality of Care Metrics</li>
@@ -288,9 +270,9 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="users"></i></div>
-            <h3 class="card-title">Requirements & Stakeholder Support</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="users"></i></div>
+            <h3>Requirements & Stakeholder Support</h3>
+            <ul class="bul">
               <li>Business Requirements Gathering</li>
               <li>Technical Translation</li>
               <li>Ad-hoc Analysis</li>
@@ -299,9 +281,9 @@ const analyst = {
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i data-lucide="shield-check"></i></div>
-            <h3 class="card-title">Data Management & Quality</h3>
-            <ul class="bullets">
+            <div class="ic"><i data-lucide="shield-check"></i></div>
+            <h3>Data Management & Quality</h3>
+            <ul class="bul">
               <li>Multi-Source Data Integration</li>
               <li>Data Validation</li>
               <li>Data Quality Checks</li>
@@ -315,58 +297,58 @@ const analyst = {
     <!-- Experience -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Experience</h2>
-          <p class="section-sub">Impact-focused work across healthcare, operations, and analytics delivery.</p>
+          <p>Impact-focused work across healthcare, operations, and analytics delivery.</p>
         </div>
 
-        <div class="timeline">
-          <div class="t-item card reveal">
-            <div class="t-top">
+        <div class="stack">
+          <div class="card reveal">
+            <div class="topline">
               <div>
-                <h3 class="card-title">Business Analyst</h3>
-                <p class="muted">NB Alpha Omega • Sep 2024 – Present</p>
+                <h3>Business Analyst</h3>
+                <div class="mutedline">NB Alpha Omega • Sep 2024 – Present</div>
               </div>
               <span class="badge">Current</span>
             </div>
-            <ul class="bullets">
-              <li>Analyzed program data and performance metrics across 5–7 initiatives, reviewing 500K+ records per reporting cycle.</li>
-              <li>Designed and built 10–15 reports and dashboards using SQL and GCP-based datasets for strategic decisions.</li>
-              <li>Applied regression, hypothesis testing, and clustering on 300K+ rows to evaluate performance and support predictive analysis.</li>
-              <li>Supported process improvements across 3–4 clinical and operational workflows, reducing inefficiencies and delays.</li>
-              <li>Partnered with 10+ stakeholders to report on clinical services, patient outcomes, quality of care, and operational efficiency.</li>
+            <ul class="bul">
+              <li>Analyzed program performance across 5–7 initiatives, reviewing 500K+ records per reporting cycle.</li>
+              <li>Built 10–15 dashboards using SQL + GCP datasets to support strategic decisions.</li>
+              <li>Applied regression, hypothesis testing, and clustering on 300K+ rows for evaluation + prediction.</li>
+              <li>Improved 3–4 clinical/operational workflows by identifying inefficiencies and delays.</li>
+              <li>Partnered with 10+ stakeholders for outcomes, quality, and operational efficiency reporting.</li>
             </ul>
           </div>
 
-          <div class="t-item card reveal">
-            <div class="t-top">
+          <div class="card reveal">
+            <div class="topline">
               <div>
-                <h3 class="card-title">Project Engineer</h3>
-                <p class="muted">Wipro Limited • Hyderabad, India • May 2021 – Jun 2022</p>
+                <h3>Project Engineer</h3>
+                <div class="mutedline">Wipro Limited • Hyderabad, India • May 2021 – Jun 2022</div>
               </div>
               <span class="badge ghost">1 year</span>
             </div>
-            <ul class="bullets">
-              <li>Gathered and documented 20–30 business requirements and translated them into inputs for development teams.</li>
-              <li>Provided ad-hoc analysis (5–8 requests/month) to support internal and external stakeholders.</li>
-              <li>Performed EDA on multi-source datasets (500K+ records) to assess quality, patterns, and outliers.</li>
-              <li>Supported development and maintenance of 8–10 analytical tools and datasets for accuracy and usability.</li>
-              <li>Collaborated with cross-functional teams to align analysis with program goals.</li>
+            <ul class="bul">
+              <li>Captured 20–30 requirements and translated them into technical inputs for development teams.</li>
+              <li>Delivered 5–8 ad-hoc analyses per month for internal and external stakeholders.</li>
+              <li>Performed EDA on 500K+ records to validate quality and identify outliers before reporting/modeling.</li>
+              <li>Supported 8–10 analytical tools/datasets ensuring consistency, accuracy, and usability.</li>
+              <li>Aligned cross-functional teams to program goals through clear reporting outputs.</li>
             </ul>
           </div>
 
-          <div class="t-item card reveal">
-            <div class="t-top">
+          <div class="card reveal">
+            <div class="topline">
               <div>
-                <h3 class="card-title">Technical & Academic Mentor – Data Analytics</h3>
-                <p class="muted">MLRIT • Aug 2018 – Jul 2020</p>
+                <h3>Technical & Academic Mentor – Data Analytics</h3>
+                <div class="mutedline">MLRIT • Aug 2018 – Jul 2020</div>
               </div>
               <span class="badge ghost">Mentorship</span>
             </div>
-            <ul class="bullets">
-              <li>Mentored teams on SQL, Python, and data modeling, turning raw data into structured insights.</li>
-              <li>Guided dashboards in Power BI and Excel with strong focus on accuracy and clarity.</li>
-              <li>Critiqued analytical outputs for logic, correctness, and professional presentation standards.</li>
+            <ul class="bul">
+              <li>Mentored teams on SQL, Python, and data modeling via hands-on projects.</li>
+              <li>Guided Power BI + Excel dashboards with a focus on accuracy and visual clarity.</li>
+              <li>Reviewed analytical outputs for logic, correctness, and professional presentation.</li>
             </ul>
           </div>
         </div>
@@ -376,114 +358,94 @@ const analyst = {
     <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Projects</h2>
-          <p class="section-sub">A mix of data engineering + analytics projects with measurable outcomes.</p>
+          <p>A mix of data engineering + analytics projects with measurable outcomes.</p>
         </div>
 
-        <div class="cards-3">
-          <article class="card project reveal">
-            <div class="p-top">
-              <h3 class="card-title">Scalable AWS Data Lakehouse Pipeline</h3>
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="projtop">
+              <h3>Scalable AWS Data Lakehouse Pipeline</h3>
               <span class="badge">Data Engineering</span>
             </div>
-            <p class="card-text">
-              Built an end-to-end lakehouse using medallion architecture (Bronze–Silver–Gold) with PySpark ETL and analytics-ready datasets.
-            </p>
-            <div class="chip-row">
+            <p>Medallion architecture with PySpark ETL and analytics-ready datasets.</p>
+            <div class="chips">
               <span class="chip">S3</span><span class="chip">Glue (PySpark)</span><span class="chip">Lambda</span>
               <span class="chip">Step Functions</span><span class="chip">Athena</span><span class="chip">Redshift</span><span class="chip">QuickSight</span>
             </div>
-            <div class="metrics">
-              <span class="metric">↓ 45% ETL time</span>
-              <span class="metric">↑ 30% reliability</span>
+            <div class="chips">
+              <span class="chip metric">↓ 45% ETL time</span>
+              <span class="chip metric">↑ 30% reliability</span>
             </div>
-            <div class="p-links">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
-                GitHub <i data-lucide="github"></i>
-              </a>
+            <div class="row">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
             </div>
           </article>
 
-          <article class="card project reveal">
-            <div class="p-top">
-              <h3 class="card-title">Power BI – Sales Dashboard</h3>
+          <article class="card reveal">
+            <div class="projtop">
+              <h3>Power BI – Sales Dashboard</h3>
               <span class="badge">BI</span>
             </div>
-            <p class="card-text">
-              Created interactive dashboards with automated refresh, KPI tracking, and trend analysis for sales performance reporting.
-            </p>
-            <div class="chip-row">
+            <p>Interactive dashboards with automated refresh + KPI tracking.</p>
+            <div class="chips">
               <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Excel</span>
             </div>
-            <div class="metrics">
-              <span class="metric">↓ 50% manual reporting</span>
+            <div class="chips">
+              <span class="chip metric">↓ 50% manual reporting</span>
             </div>
-            <div class="p-links">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
-                Demo <i data-lucide="arrow-up-right"></i>
-              </a>
+            <div class="row">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">Demo <i data-lucide="arrow-up-right"></i></a>
             </div>
           </article>
 
-          <article class="card project reveal">
-            <div class="p-top">
-              <h3 class="card-title">Netflix Content Strategy Analysis</h3>
+          <article class="card reveal">
+            <div class="projtop">
+              <h3>Netflix Content Strategy Analysis</h3>
               <span class="badge">Analytics</span>
             </div>
-            <p class="card-text">
-              Analyzed 3M+ records to identify content performance and audience trends; built dashboards for strategy decisions.
-            </p>
-            <div class="chip-row">
+            <p>Analyzed 3M+ records; dashboards for content decisions.</p>
+            <div class="chips">
               <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Matplotlib</span>
             </div>
-            <div class="metrics">
-              <span class="metric">↑ 17% recommendation insights</span>
+            <div class="chips">
+              <span class="chip metric">↑ 17% insights</span>
             </div>
-            <div class="p-links">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
-                GitHub <i data-lucide="github"></i>
-              </a>
+            <div class="row">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
             </div>
           </article>
 
-          <article class="card project reveal">
-            <div class="p-top">
-              <h3 class="card-title">IEEE-CIS Fraud Detection</h3>
+          <article class="card reveal">
+            <div class="projtop">
+              <h3>IEEE-CIS Fraud Detection</h3>
               <span class="badge">ML</span>
             </div>
-            <p class="card-text">
-              Feature engineering + model tuning on transaction datasets using supervised ML for risk analytics.
-            </p>
-            <div class="chip-row">
+            <p>Feature engineering + model tuning for risk analytics.</p>
+            <div class="chips">
               <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Python</span>
             </div>
-            <div class="metrics">
-              <span class="metric">↑ 18% accuracy</span>
-              <span class="metric">↓ 22% false positives</span>
+            <div class="chips">
+              <span class="chip metric">↑ 18% accuracy</span>
+              <span class="chip metric">↓ 22% false positives</span>
             </div>
-            <div class="p-links">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
-                GitHub <i data-lucide="github"></i>
-              </a>
+            <div class="row">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
             </div>
           </article>
 
-          <article class="card project reveal">
-            <div class="p-top">
-              <h3 class="card-title">Synthetic Data Generator using GenAI</h3>
+          <article class="card reveal">
+            <div class="projtop">
+              <h3>Synthetic Data Generator using GenAI</h3>
               <span class="badge">GenAI</span>
             </div>
-            <p class="card-text">
-              Built a synthetic data generation pipeline using Generative AI and implemented data quality validation checks.
-            </p>
-            <div class="chip-row">
+            <p>Synthetic data pipeline with validation checks.</p>
+            <div class="chips">
               <span class="chip">Python</span><span class="chip">OpenAI API</span><span class="chip">Pandas</span><span class="chip">Data Quality</span>
             </div>
-            <div class="p-links">
-              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">
-                GitHub <i data-lucide="github"></i>
-              </a>
+            <div class="row">
+              <a class="btn small ghost" href="#" target="_blank" rel="noreferrer">GitHub <i data-lucide="github"></i></a>
             </div>
           </article>
         </div>
@@ -493,28 +455,28 @@ const analyst = {
     <!-- Education -->
     <section id="education" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Education</h2>
-          <p class="section-sub">Formal training + strong analytics foundation.</p>
+          <p>Formal training + strong analytics foundation.</p>
         </div>
 
-        <div class="grid-2">
+        <div class="grid2">
           <div class="card reveal">
-            <div class="edu-row">
-              <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu">
+              <div class="ic"><i data-lucide="graduation-cap"></i></div>
               <div>
-                <h3 class="card-title">Master of Professional Studies in Data Science</h3>
-                <p class="muted">University of Maryland Baltimore County • Aug 2022 – May 2024</p>
+                <h3>Master of Professional Studies in Data Science</h3>
+                <div class="mutedline">University of Maryland Baltimore County • Aug 2022 – May 2024</div>
               </div>
             </div>
           </div>
 
           <div class="card reveal">
-            <div class="edu-row">
-              <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu">
+              <div class="ic"><i data-lucide="graduation-cap"></i></div>
               <div>
-                <h3 class="card-title">Bachelor in Electronics and Communication Engineering</h3>
-                <p class="muted">Marri Laxman Reddy Institute of Technology • Aug 2018 – Aug 2020</p>
+                <h3>Bachelor in Electronics and Communication Engineering</h3>
+                <div class="mutedline">Marri Laxman Reddy Institute of Technology • Aug 2018 – Aug 2020</div>
               </div>
             </div>
           </div>
@@ -522,56 +484,22 @@ const analyst = {
       </div>
     </section>
 
-    <!-- Certifications -->
+    <!-- Certs -->
     <section id="certs" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Certifications</h2>
-          <p class="section-sub">Proof of depth in cloud, analytics, and compliance.</p>
+          <p>Proof of depth in cloud, analytics, and compliance.</p>
         </div>
 
-        <div class="cards-3">
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="shield-check"></i></div>
-            <h3 class="card-title">AWS Solutions Architect – Professional</h3>
-            <p class="muted">AWS</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="layers"></i></div>
-            <h3 class="card-title">AWS Certified Data Engineer – Associate (2025)</h3>
-            <p class="muted">AWS</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="layers"></i></div>
-            <h3 class="card-title">AWS Certified Solutions Architect – Associate</h3>
-            <p class="muted">AWS</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="bar-chart-3"></i></div>
-            <h3 class="card-title">Tableau Desktop Specialist</h3>
-            <p class="muted">Tableau</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="shield-check"></i></div>
-            <h3 class="card-title">HIPAA Certified – American Health Training</h3>
-            <p class="muted">Healthcare compliance</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="file-text"></i></div>
-            <h3 class="card-title">Applied Statistics with Python – University of Michigan (Coursera)</h3>
-            <p class="muted">Statistics</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-icon"><i data-lucide="cloud"></i></div>
-            <h3 class="card-title">Oracle Cloud Infrastructure Foundations Associate</h3>
-            <p class="muted">Oracle</p>
-          </div>
+        <div class="grid3">
+          <div class="card reveal"><h3>AWS Solutions Architect – Professional</h3><div class="mutedline">AWS</div></div>
+          <div class="card reveal"><h3>AWS Certified Data Engineer – Associate (2025)</h3><div class="mutedline">AWS</div></div>
+          <div class="card reveal"><h3>AWS Certified Solutions Architect – Associate</h3><div class="mutedline">AWS</div></div>
+          <div class="card reveal"><h3>Tableau Desktop Specialist</h3><div class="mutedline">Tableau</div></div>
+          <div class="card reveal"><h3>HIPAA Certified – American Health Training</h3><div class="mutedline">Healthcare compliance</div></div>
+          <div class="card reveal"><h3>Applied Statistics with Python – University of Michigan (Coursera)</h3><div class="mutedline">Statistics</div></div>
+          <div class="card reveal"><h3>Oracle Cloud Infrastructure Foundations Associate</h3><div class="mutedline">Oracle</div></div>
         </div>
       </div>
     </section>
@@ -579,69 +507,46 @@ const analyst = {
     <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="head reveal">
           <h2>Contact</h2>
-          <p class="section-sub">Want dashboards that drive decisions? Let’s connect.</p>
+          <p>Want dashboards that drive decisions? Let’s connect.</p>
         </div>
 
-        <div class="grid-2">
+        <div class="grid2">
           <div class="card reveal">
-            <h3 class="card-title">Reach out</h3>
-
-            <div class="contact-row">
-              <i data-lucide="mail"></i>
-              <a href="mailto:rachana18apr@gmail.com">rachana18apr@gmail.com</a>
+            <h3>Reach out</h3>
+            <div class="contact">
+              <div><i data-lucide="mail"></i><a href="mailto:rachana18apr@gmail.com">rachana18apr@gmail.com</a></div>
+              <div><i data-lucide="phone"></i><a href="tel:+16673698226">+1 (667) 369-8226</a></div>
+              <div><i data-lucide="linkedin"></i><a id="lnk2" href="#" target="_blank" rel="noreferrer">LinkedIn</a></div>
+              <div><i data-lucide="github"></i><a id="git2" href="#" target="_blank" rel="noreferrer">GitHub</a></div>
             </div>
-
-            <div class="contact-row">
-              <i data-lucide="phone"></i>
-              <a href="tel:+16673698226">+1 (667) 369-8226</a>
-            </div>
-
-            <div class="contact-row">
-              <i data-lucide="linkedin"></i>
-              <a href="#" id="linkedin2" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-
-            <div class="contact-row">
-              <i data-lucide="github"></i>
-              <a href="#" id="github2" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn small primary" href="mailto:rachana18apr@gmail.com">
-                Email me <i data-lucide="arrow-up-right"></i>
-              </a>
-              <a class="btn small ghost" href="#top">
-                Back to top <i data-lucide="arrow-up"></i>
-              </a>
+            <div class="row">
+              <a class="btn primary small" href="mailto:rachana18apr@gmail.com">Email me <i data-lucide="arrow-up-right"></i></a>
+              <a class="btn small ghost" href="#top">Back to top <i data-lucide="arrow-up"></i></a>
             </div>
           </div>
 
           <div class="card reveal">
-            <h3 class="card-title">Quick message</h3>
+            <h3>Quick message</h3>
             <form class="form" onsubmit="return false;">
               <label>
                 <span>Name</span>
                 <input type="text" placeholder="Your name" />
               </label>
-
               <label>
                 <span>Email</span>
                 <input type="email" placeholder="you@example.com" />
               </label>
-
               <label>
                 <span>Message</span>
                 <textarea rows="5" placeholder="Tell me what you’re looking for..."></textarea>
               </label>
-
               <button class="btn primary" id="fakeSend">
                 Send <i data-lucide="send"></i>
               </button>
-
-              <p class="muted tiny" id="formNote">
-                This form is static (GitHub Pages). If you want, I’ll add Formspree in 2 lines.
+              <p class="mutedline smallnote" id="note">
+                This form is static on GitHub Pages. If you want, I’ll add Formspree in 2 lines.
               </p>
             </form>
           </div>
@@ -650,18 +555,14 @@ const analyst = {
     </section>
 
     <footer class="footer">
-      <div class="container footer-inner">
-        <p class="muted">© <span id="year"></span> Venkata Rachana Yekkirala • Built with HTML/CSS/JS</p>
-        <div class="footer-icons">
-          <a class="icon-link" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
-        </div>
+      <div class="container foot">
+        <div class="mutedline">© <span id="year"></span> Venkata Rachana Yekkirala • Built with HTML/CSS/JS</div>
+        <a class="icon" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
       </div>
     </footer>
   </main>
 
   <script src="./script.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
