@@ -527,29 +527,48 @@
             </div>
           </div>
 
-          <div class="card reveal">
-            <h3>Quick message</h3>
-            <form class="form" onsubmit="return false;">
-              <label>
-                <span>Name</span>
-                <input type="text" placeholder="Your name" />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" placeholder="you@example.com" />
-              </label>
-              <label>
-                <span>Message</span>
-                <textarea rows="5" placeholder="Tell me what you’re looking for..."></textarea>
-              </label>
-              <button class="btn primary" id="fakeSend">
-                Send <i data-lucide="send"></i>
-              </button>
-              <p class="mutedline smallnote" id="note">
-                This form is static on GitHub Pages. If you want, I’ll add Formspree in 2 lines.
-              </p>
-            </form>
-          </div>
+  <div class="card reveal">
+  <h3>Quick message</h3>
+
+  <form
+    class="form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    id="contactForm"
+  >
+    <!-- Netlify required -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Honeypot (spam protection) -->
+    <p style="display:none;">
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <label>
+      <span>Name</span>
+      <input type="text" name="name" placeholder="Your name" required />
+    </label>
+
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" placeholder="you@example.com" required />
+    </label>
+
+    <label>
+      <span>Message</span>
+      <textarea name="message" rows="5" placeholder="Tell me what you’re looking for..." required></textarea>
+    </label>
+
+    <button class="btn primary" id="sendBtn" type="submit">
+      Send <i data-lucide="send"></i>
+    </button>
+
+    <p class="mutedline smallnote" id="note"></p>
+  </form>
+</div>
+
         </div>
       </div>
     </section>
